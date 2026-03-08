@@ -1,0 +1,1820 @@
+[
+    {
+        "id": "root_event",
+        "name": "root event",
+        "child_ids": [
+            "animal",
+            "human",
+            "human_obj_interact",
+            "music",
+            "machinery",
+            "nature",
+            "obj_obj_interact"
+        ],
+        "synonyms": [
+            "root node"
+        ],
+        "label_id": 0,
+        "seed_audio_dir": null,
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "id": "human",
+        "name": "human",
+        "child_ids": [
+            "human_voice",
+            "human_speech",
+            "hands_action",
+            "group_action",
+            "locomotion"
+        ],
+        "synonyms": [
+            "person",
+            "people"
+        ],
+        "label_id": 0,
+        "seed_audio_dir": "seed_audios/human"
+    },
+    {
+        "id": "human_voice",
+        "name": "human voice",
+        "child_ids": [
+            "baby_crying",
+            "laughing",
+            "shouting",
+            "whistling",
+            "coughing",
+            "sneezing",
+            "chewing",
+            "burping",
+            "farting",
+            "snoring"
+        ],
+        "synonyms": [
+            "human sound",
+            "human vocalization"
+        ],
+        "label_id": 0,
+        "seed_audio_dir": "seed_audios/human/human_voice"
+    },
+    {
+        "id": "human_speech",
+        "name": "human speech",
+        "child_ids": [
+            "male_speech",
+            "female_speech",
+            "child_speech",
+            "group_speech"
+        ],
+        "synonyms": [
+            "human talking",
+            "human conversation"
+        ],
+        "label_id": 1,
+        "seed_audio_dir": "seed_audios/human/human_speech"
+    },
+    {
+        "id": "hands_action",
+        "name": "hands action",
+        "child_ids": [
+            "clapping",
+            "finger_snapping"
+        ],
+        "synonyms": [
+            "hand movement",
+            "hand sound"
+        ],
+        "label_id": 2,
+        "seed_audio_dir": "seed_audios/human/hands_action"
+    },
+    {
+        "id": "group_action",
+        "name": "group action",
+        "child_ids": [
+            "cheering",
+            "group_talking",
+            "group_clapping"
+        ],
+        "synonyms": [
+            "crowd sound",
+            "group sound"
+        ],
+        "label_id": 3,
+        "seed_audio_dir": "seed_audios/human/group_action"
+    },
+    {
+        "id": "group_clapping",
+        "name": "group clapping",
+        "child_ids": [],
+        "synonyms": [
+            "group applause",
+            "crowd applause",
+            "crowd clapping"
+        ],
+        "label_id": 17,
+        "seed_audio_dir": "seed_audios/human/group_action/group_clapping"
+    },
+    {
+        "id": "locomotion",
+        "name": "locomotion",
+        "child_ids": [
+            "running",
+            "footsteps"
+        ],
+        "synonyms": [
+            "movement sound"
+        ],
+        "label_id": 4,
+        "seed_audio_dir": "seed_audios/human/locomotion"
+    },
+    {
+        "id": "baby_crying",
+        "name": "baby crying",
+        "child_ids": [],
+        "synonyms": [
+            "infant crying",
+            "baby wailing",
+            "baby sobbing"
+        ],
+        "label_id": 0,
+        "seed_audio_dir": "seed_audios/human/human_voice/baby_crying"
+    },
+    {
+        "id": "laughing",
+        "name": "laughing",
+        "child_ids": [],
+        "synonyms": [
+            "laughter",
+            "giggle",
+            "chuckling",
+            "guffawing"
+        ],
+        "label_id": 1,
+        "seed_audio_dir": "seed_audios/human/human_voice/laughing"
+    },
+    {
+        "id": "shouting",
+        "name": "shouting",
+        "child_ids": [],
+        "synonyms": [
+            "yelling",
+            "screaming",
+            "screeching",
+            "yelling out"
+        ],
+        "label_id": 2,
+        "seed_audio_dir": "seed_audios/human/human_voice/shouting"
+    },
+    {
+        "id": "whistling",
+        "name": "whistling",
+        "child_ids": [],
+        "synonyms": [
+            "whistle"
+        ],
+        "label_id": 3,
+        "seed_audio_dir": "seed_audios/human/human_voice/whistling"
+    },
+    {
+        "id": "coughing",
+        "name": "coughing",
+        "child_ids": [],
+        "synonyms": [
+            "wheezing",
+            "throat clearing"
+        ],
+        "label_id": 4,
+        "seed_audio_dir": "seed_audios/human/human_voice/coughing"
+    },
+    {
+        "id": "sneezing",
+        "name": "sneezing",
+        "child_ids": [],
+        "synonyms": [
+            "sneeze"
+        ],
+        "label_id": 5,
+        "seed_audio_dir": "seed_audios/human/human_voice/sneezing"
+    },
+    {
+        "id": "chewing",
+        "name": "chewing",
+        "child_ids": [],
+        "synonyms": [
+            "biting",
+            "munching",
+            "gnawing",
+            "chomping"
+        ],
+        "label_id": 6,
+        "seed_audio_dir": "seed_audios/human/human_voice/chewing"
+    },
+    {
+        "id": "burping",
+        "name": "burping",
+        "child_ids": [],
+        "synonyms": [
+            "eructation",
+            "belching",
+            "burp",
+            "hiccup"
+        ],
+        "label_id": 7,
+        "seed_audio_dir": "seed_audios/human/human_voice/burping"
+    },
+    {
+        "id": "farting",
+        "name": "farting",
+        "child_ids": [],
+        "synonyms": [
+            "flatulence",
+            "passing gas",
+            "fart"
+        ],
+        "label_id": 8,
+        "seed_audio_dir": "seed_audios/human/human_voice/farting"
+    },
+    {
+        "id": "snoring",
+        "name": "snoring",
+        "child_ids": [],
+        "synonyms": [
+            "snoring",
+            "nose snoring",
+            "sleep snoring"
+        ],
+        "label_id": 107,
+        "seed_audio_dir": "seed_audios/human/human_voice/snoring"
+    },
+    {
+        "id": "male_speech",
+        "name": "male speech",
+        "child_ids": [],
+        "synonyms": [
+            "male talking", 
+            "man talking", 
+            "male speaking"
+        ],
+        "label_id": 9,
+        "seed_audio_dir": "seed_audios/human/human_speech/male_speech"
+    },
+    {
+        "id": "female_speech",
+        "name": "female speech",
+        "child_ids": [],
+        "synonyms": [
+            "female talking",
+            "woman talking",
+            "female speaking",
+            "woman saying"
+        ],
+        "label_id": 10,
+        "seed_audio_dir": "seed_audios/human/human_speech/female_speech"
+    },
+    {
+        "id": "child_speech",
+        "name": "child speech",
+        "child_ids": [],
+        "synonyms": [
+            "kid talking",
+            "child talking",
+            "child speaking",
+            "kid speaking"
+        ],
+        "label_id": 11,
+        "seed_audio_dir": "seed_audios/human/human_speech/child_speech"
+    },
+    {
+        "id": "group_speech",
+        "name": "group speech",
+        "child_ids": [],
+        "synonyms": [
+            "group talking",
+            "crowd talking",
+            "crowd speaking"
+        ],
+        "label_id": 12,
+        "seed_audio_dir": "seed_audios/human/human_speech/group_speech"
+    },
+    {
+        "id": "clapping",
+        "name": "clapping",
+        "child_ids": [],
+        "synonyms": [
+            "applause",
+            "hand clapping",
+            "hand applause",
+            "applauding"
+        ],
+        "label_id": 13,
+        "seed_audio_dir": "seed_audios/human/hands_action/clapping"
+    },
+    {
+        "id": "finger_snapping",
+        "name": "finger snapping",
+        "child_ids": [],
+        "synonyms": [
+            "snap",
+            "snapping fingers",
+            "finger snap"
+        ],
+        "label_id": 14,
+        "seed_audio_dir": "seed_audios/human/hands_action/finger_snapping"
+    },
+    {
+        "id": "cheering",
+        "name": "cheering",
+        "child_ids": [],
+        "synonyms": [
+            "applause",
+            "crowd cheering",
+            "crowd applause",
+            "group cheering"
+        ],
+        "label_id": 15,
+        "seed_audio_dir": "seed_audios/human/group_action/cheering"
+    },
+    {
+        "id": "group_talking",
+        "name": "group talking",
+        "child_ids": [],
+        "synonyms": [
+            "crowd talking",
+            "crowd speaking"
+        ],
+        "label_id": 16,
+        "seed_audio_dir": "seed_audios/human/group_action/group_talking"
+    },
+    {
+        "id": "running",
+        "name": "running",
+        "child_ids": [],
+        "synonyms": [
+            "fast running",
+            "ground running"
+        ],
+        "label_id": 18,
+        "seed_audio_dir": "seed_audios/human/locomotion/running"
+    },
+    {
+        "id": "footsteps",
+        "name": "footsteps",
+        "child_ids": [],
+        "synonyms": [
+            "footstep",
+            "walking",
+            "human steps",
+            "human footsteps"
+        ],
+        "label_id": 19,
+        "seed_audio_dir": "seed_audios/human/locomotion/footsteps"
+    },
+    {
+        "id": "animal",
+        "name": "animal",
+        "child_ids": [
+            "wild_ground_animal",
+            "livestock",
+            "domestic_animal",
+            "wild_animal"
+        ],
+        "synonyms": [],
+        "label_id": 1,
+        "seed_audio_dir": "seed_audios/animal"
+    },
+    {
+        "id": "wild_ground_animal",
+        "name": "wild ground animal",
+        "child_ids": [
+            "lion_roaring",
+            "frog_croaking",
+            "horse_neighing",
+            "donkey_braying",
+            "wolf_howling",
+            "cricket_chirping"
+        ],
+        "synonyms": [
+            "wildlife"
+        ],
+        "label_id": 5,
+        "seed_audio_dir": "seed_audios/animal/wild_ground_animal"
+    },
+    {
+        "id": "donkey_braying",
+        "name": "donkey braying",
+        "child_ids": [],
+        "synonyms": [
+            "donkey bray",
+            "braying donkey"
+        ],
+        "label_id": 23,
+        "seed_audio_dir": "seed_audios/animal/wild_ground_animal/donkey_braying"
+    },
+    {
+        "id": "wolf_howling",
+        "name": "wolf howling",
+        "child_ids": [],
+        "synonyms": [
+            "wolf howl",
+            "howling wolf"
+        ],
+        "label_id": 24,
+        "seed_audio_dir": "seed_audios/animal/wild_ground_animal/wolf_howling"
+    },
+    {
+        "id": "cricket_chirping",
+        "name": "cricket chirping",
+        "child_ids": [],
+        "synonyms": [
+            "cricket chirp",
+            "cricket vocal",
+            "cricket chirping"
+        ],
+        "label_id": 102,
+        "seed_audio_dir": "seed_audios/animal/wild_ground_animal/cricket_chirping"
+    },
+    {
+        "id": "livestock",
+        "name": "livestock",
+        "child_ids": [
+            "cow_mooing",
+            "pig_oinking",
+            "sheep_bleating",
+            "rooster_crowing",
+            "duck_quacking"
+        ],
+        "synonyms": [
+            "farm animal"
+        ],
+        "label_id": 6,
+        "seed_audio_dir": "seed_audios/animal/livestock"
+    },
+    {
+        "id": "domestic_animal",
+        "name": "domestic animal",
+        "child_ids": [
+            "dog_barking",
+            "cat_meowing",
+            "dog_growling",
+            "cat_spurring"
+        ],
+        "synonyms": [
+            "pet",
+            "house animal",
+            "home animal",
+            "household animal"
+        ],
+        "label_id": 7,
+        "seed_audio_dir": "seed_audios/animal/domestic_animal"
+    },
+    {
+        "id": "wild_animal",
+        "name": "wild animal",
+        "child_ids": [
+            "cuckoo_calling",
+            "birds_chorus",
+            "seagull_cawing",
+            "peacock_rattling",
+            "blue_jay_whistling",
+            "nightingale_singing",
+            "fly_buzzing"
+        ],
+        "synonyms": [
+            "animal in the wild"
+        ],
+        "label_id": 8,
+        "seed_audio_dir": "seed_audios/animal/wild_animal"
+    },
+    {
+        "id": "lion_roaring",
+        "name": "lion roaring",
+        "child_ids": [],
+        "synonyms": [
+            "lion roar",
+            "roaring lion"
+        ],
+        "label_id": 20,
+        "seed_audio_dir": "seed_audios/animal/wild_ground_animal/lion_roaring"
+    },
+    {
+        "id": "frog_croaking",
+        "name": "frog croaking",
+        "child_ids": [],
+        "synonyms": [
+            "frog croak",
+            "croaking"
+        ],
+        "label_id": 21,
+        "seed_audio_dir": "seed_audios/animal/wild_ground_animal/frog_croaking"
+    },
+    {
+        "id": "horse_neighing",
+        "name": "horse neighing",
+        "child_ids": [],
+        "synonyms": [
+            "horse neigh",
+            "neighing horse"
+        ],
+        "label_id": 22,
+        "seed_audio_dir": "seed_audios/animal/wild_ground_animal/horse_neighing"
+    },
+    {
+        "id": "cow_mooing",
+        "name": "cow mooing",
+        "child_ids": [],
+        "synonyms": [
+            "cow moo",
+            "cow mooing noise",
+            "mooing cow"
+        ],
+        "label_id": 25,
+        "seed_audio_dir": "seed_audios/animal/livestock/cow_mooing"
+    },
+    {
+        "id": "pig_oinking",
+        "name": "pig oinking",
+        "child_ids": [],
+        "synonyms": [
+            "pig oink",
+            "pig noise"
+        ],
+        "label_id": 26,
+        "seed_audio_dir": "seed_audios/animal/livestock/pig_oinking"
+    },
+    {
+        "id": "sheep_bleating",
+        "name": "sheep bleating",
+        "child_ids": [],
+        "synonyms": [
+            "sheep bleat"
+        ],
+        "label_id": 27,
+        "seed_audio_dir": "seed_audios/animal/livestock/sheep_bleating"
+    },
+    {
+        "id": "rooster_crowing",
+        "name": "rooster crowing",
+        "child_ids": [],
+        "synonyms": [
+            "rooster crow",
+            "cock crowing",
+            "crowing rooster"
+        ],
+        "label_id": 28,
+        "seed_audio_dir": "seed_audios/animal/livestock/rooster_crowing"
+    },
+    {
+        "id": "duck_quacking",
+        "name": "duck quacking",
+        "child_ids": [],
+        "synonyms": [
+            "duck quack",
+            "duck quacking noise",
+            "quacking duck"
+        ],
+        "label_id": 29,
+        "seed_audio_dir": "seed_audios/animal/livestock/duck_quacking"
+    },
+    {
+        "id": "dog_barking",
+        "name": "dog barking",
+        "child_ids": [],
+        "synonyms": [
+            "barking dog",
+            "dog bark",
+            "barking"
+        ],
+        "label_id": 30,
+        "seed_audio_dir": "seed_audios/animal/domestic_animal/dog_barking"
+    },
+    {
+        "id": "cat_meowing",
+        "name": "cat meowing",
+        "child_ids": [],
+        "synonyms": [
+            "meowing cat",
+            "cat meow",
+            "cat meowing noise",
+            "meowing"
+        ],
+        "label_id": 31,
+        "seed_audio_dir": "seed_audios/animal/domestic_animal/cat_meowing"
+    },
+    {
+        "id": "dog_growling",
+        "name": "dog growling",
+        "child_ids": [],
+        "synonyms": [
+            "growling dog",
+            "dog growl",
+            "dog growling noise"
+        ],
+        "label_id": 32,
+        "seed_audio_dir": "seed_audios/animal/domestic_animal/dog_growling"
+    },
+    {
+        "id": "cat_spurring",
+        "name": "cat spurring",
+        "child_ids": [],
+        "synonyms": [
+            "spurring cat",
+            "cat spur",
+            "cat purring"
+        ],
+        "label_id": 33,
+        "seed_audio_dir": "seed_audios/animal/domestic_animal/cat_spurring"
+    },
+    {
+        "id": "cuckoo_calling",
+        "name": "cuckoo calling",
+        "child_ids": [],
+        "synonyms": [
+            "cuckoo call",
+            "cuckoo vocalization",
+            "cuckoo chirping"
+        ],
+        "label_id": 34,
+        "seed_audio_dir": "seed_audios/animal/wild_animal/cuckoo_calling"
+    },
+    {
+        "id": "birds_chorus",
+        "name": "birds chorus",
+        "child_ids": [],
+        "synonyms": [
+            "group birds"
+        ],
+        "label_id": 35,
+        "seed_audio_dir": "seed_audios/animal/wild_animal/birds_chorus"
+    },
+    {
+        "id": "seagull_cawing",
+        "name": "seagull cawing",
+        "child_ids": [],
+        "synonyms": [
+            "seagull caw",
+            "seagull call",
+            "seagull chirping"
+        ],
+        "label_id": 36,
+        "seed_audio_dir": "seed_audios/animal/wild_animal/seagull_cawing"
+    },
+    {
+        "id": "peacock_rattling",
+        "name": "peacock rattling",
+        "child_ids": [],
+        "synonyms": [
+            "peacock calling",
+            "peacock rattle",
+            "peacock chirping"
+        ],
+        "label_id": 37,
+        "seed_audio_dir": "seed_audios/animal/wild_animal/peacock_rattling"
+    },
+    {
+        "id": "blue_jay_whistling",
+        "name": "blue jay whistling",
+        "child_ids": [],
+        "synonyms": [
+            "blue jay singing",
+            "blue jay call",
+            "blue jay chirping"
+        ],
+        "label_id": 38,
+        "seed_audio_dir": "seed_audios/animal/wild_animal/blue_jay_whistling"
+    },
+    {
+        "id": "nightingale_singing",
+        "name": "nightingale singing",
+        "child_ids": [],
+        "synonyms": [
+            "nightingale song",
+            "nightingale chirping",
+            "nightingale call"
+        ],
+        "label_id": 39,
+        "seed_audio_dir": "seed_audios/animal/wild_animal/nightingale_singing"
+    },
+    {
+        "id": "fly_buzzing",
+        "name": "fly buzzing",
+        "child_ids": [],
+        "synonyms": [
+            "buzzing fly",
+            "fly buzz",
+            "housefly buzzing",
+            "housefly buzz"
+        ],
+        "label_id": 106,
+        "seed_audio_dir": "seed_audios/animal/wild_animal/fly_buzzing"
+    },
+    {
+        "id": "machinery",
+        "name": "machinery",
+        "child_ids": [
+            "alarm",
+            "mechanism"
+        ],
+        "synonyms": [
+            "machine"
+        ],
+        "label_id": 4,
+        "seed_audio_dir": "seed_audios/machinery"
+    },
+    {
+        "id": "alarm",
+        "name": "alarm",
+        "child_ids": [
+            "siren",
+            "door_bell",
+            "car_horn",
+            "boat_horn",
+            "bicycle_bell",
+            "telephone_ringing",
+            "telephone_dialing"
+        ],
+        "synonyms": [
+            "alert",
+            "warning",
+            "alarming",
+            "alterting"
+        ],
+        "label_id": 14,
+        "seed_audio_dir": "seed_audios/machinery/alarm"
+    },
+    {
+        "id": "mechanism",
+        "name": "mechanism",
+        "child_ids": [
+            "ratchet_and_pawl_clicking",
+            "printer_printing",
+            "clock_ticking",
+            "paper_shredding",
+            "engine_revving",
+            "camera_shuttering"
+        ],
+        "synonyms": [
+            "machine mechanism"
+        ],
+        "label_id": 15,
+        "seed_audio_dir": "seed_audios/machinery/mechanism"
+    },
+    {
+        "id": "siren",
+        "name": "siren",
+        "child_ids": [],
+        "synonyms": [
+            "police siren",
+            "ambulance siren",
+            "fire truck siren"
+        ],
+        "label_id": 61,
+        "seed_audio_dir": "seed_audios/machinery/alarm/siren"
+    },
+    {
+        "id": "door_bell",
+        "name": "door bell",
+        "child_ids": [],
+        "synonyms": [
+            "door belling",
+            "doorbell ringing",
+            "doorbell"
+        ],
+        "label_id": 62,
+        "seed_audio_dir": "seed_audios/machinery/alarm/door_bell"
+    },
+    {
+        "id": "car_horn",
+        "name": "car horn",
+        "child_ids": [],
+        "synonyms": [
+            "car honking",
+            "car honk",
+            "vehicle horn",
+            "vehicle honking"
+        ],
+        "label_id": 63,
+        "seed_audio_dir": "seed_audios/machinery/alarm/car_horn"
+    },
+    {
+        "id": "boat_horn",
+        "name": "boat horn",
+        "child_ids": [],
+        "synonyms": [
+            "boat honking",
+            "ship horn",
+            "ship honking"
+        ],
+        "label_id": 64,
+        "seed_audio_dir": "seed_audios/machinery/alarm/boat_horn"
+    },
+    {
+        "id": "bicycle_bell",
+        "name": "bicycle bell",
+        "child_ids": [],
+        "synonyms": [
+            "bike bell",
+            "bicycle ringing",
+            "bike ringing"
+        ],
+        "label_id": 65,
+        "seed_audio_dir": "seed_audios/machinery/alarm/bicycle_bell"
+    },
+    {
+        "id": "telephone_ringing",
+        "name": "telephone ringing",
+        "child_ids": [],
+        "synonyms": [
+            "phone ringing",
+            "telephone ring",
+            "telephone ring tone"
+        ],
+        "label_id": 66,
+        "seed_audio_dir": "seed_audios/machinery/alarm/telephone_ringing"
+    },
+    {
+        "id": "telephone_dialing",
+        "name": "telephone dialing",
+        "child_ids": [],
+        "synonyms": [
+            "phone dialing",
+            "telephone dial",
+            "telephone dial tone"
+        ],
+        "label_id": 108,
+        "seed_audio_dir": "seed_audios/machinery/alarm/telephone_dialing"
+    },
+    {
+        "id": "ratchet_and_pawl_clicking",
+        "name": "ratchet and pawl clicking",
+        "child_ids": [],
+        "synonyms": [
+            "ratchet clicking",
+            "pawl clicking",
+            "ratchet and pawl"
+        ],
+        "label_id": 67,
+        "seed_audio_dir": "seed_audios/machinery/mechanism/ratchet_and_pawl_clicking"
+    },
+    {
+        "id": "printer_printing",
+        "name": "printer printing",
+        "child_ids": [],
+        "synonyms": [
+            "printing machine",
+            "paper printing",
+            "printer machine printing"
+        ],
+        "label_id": 68,
+        "seed_audio_dir": "seed_audios/machinery/mechanism/printer_printing"
+    },
+    {
+        "id": "clock_ticking",
+        "name": "clock ticking",
+        "child_ids": [],
+        "synonyms": [
+            "ticking clock",
+            "clock ticktock"
+        ],
+        "label_id": 69,
+        "seed_audio_dir": "seed_audios/machinery/mechanism/clock_ticking"
+    },
+    {
+        "id": "paper_shredding",
+        "name": "paper shredding",
+        "child_ids": [],
+        "synonyms": [
+            "shredding machine",
+            "paper shredder",
+            "paper shredding machine"
+        ],
+        "label_id": 70,
+        "seed_audio_dir": "seed_audios/machinery/mechanism/paper_shredding"
+    },
+    {
+        "id": "engine_revving",
+        "name": "engine revving",
+        "child_ids": [],
+        "synonyms": [
+            "engine revving",
+            "engine accelerating",
+            "engine growing louder"
+        ],
+        "label_id": 100,
+        "seed_audio_dir": "seed_audios/machinery/mechanism/engine_revving"
+    },
+    {
+        "id": "camera_shuttering",
+        "name": "camera shuttering",
+        "child_ids": [],
+        "synonyms": [
+            "camera shuttering",
+            "camera clicking",
+            "camera sound",
+            "camera taking photo",
+            "camera taking picture"
+        ],
+        "label_id": 109,
+        "seed_audio_dir": "seed_audios/machinery/mechanism/camera_shuttering"
+    },
+    {
+        "id": "obj_obj_interact",
+        "name": "obj-obj interact",
+        "child_ids": [
+            "impact",
+            "friction",
+            "dropping",
+            "explosion"
+        ],
+        "synonyms": [
+            "object-object interaction"
+        ],
+        "label_id": 5,
+        "seed_audio_dir": "seed_audios/obj_obj_interact"
+    },
+    {
+        "id": "impact",
+        "name": "impact",
+        "child_ids": [
+            "key_jingling",
+            "ball_bouncing",
+            "pen_clicking",
+            "wind_chime"
+        ],
+        "synonyms": [
+            "collision"
+        ],
+        "label_id": 16,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/impact"
+    },
+    {
+        "id": "friction",
+        "name": "friction",
+        "child_ids": [
+            "knife_sharpening",
+            "sandpaper_scraping",
+            "plastic_scratching",
+            "string_rubbing",
+            "car_emergency_braking"
+        ],
+        "synonyms": [
+            "rubbing"
+        ],
+        "label_id": 17,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/friction"
+    },
+    {
+        "id": "car_emergency_braking",
+        "name": "car emergency braking",
+        "child_ids": [],
+        "synonyms": [
+            "car screeching",
+            "car skidding",
+            "car braking",
+            "tire squealing",
+            "tire screeching"
+        ],
+        "label_id": 79,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/friction/car_emergency_braking"
+    },
+    {
+        "id": "dropping",
+        "name": "dropping",
+        "child_ids": [
+            "glass_clinking",
+            "coin_dropping",
+            "metal_dropping"
+        ],
+        "synonyms": [
+            "falling"
+        ],
+        "label_id": 18,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/dropping"
+    },
+    {
+        "id": "explosion",
+        "name": "explosion",
+        "child_ids": [
+            "firework",
+            "gunshot",
+            "artillery_firing"
+        ],
+        "synonyms": [
+            "blast"
+        ],
+        "label_id": 19,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/explosion"
+    },
+    {
+        "id": "key_jingling",
+        "name": "key jingling",
+        "child_ids": [],
+        "synonyms": [
+            "key collision",
+            "key jingle"
+        ],
+        "label_id": 71,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/impact/key_jingling"
+    },
+    {
+        "id": "ball_bouncing",
+        "name": "ball bouncing",
+        "child_ids": [],
+        "synonyms": [
+            "ball collision",
+            "ball bounce",
+            "ball bouncing"
+        ],
+        "label_id": 72,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/impact/ball_bouncing"
+    },
+    {
+        "id": "pen_clicking",
+        "name": "pen clicking",
+        "child_ids": [],
+        "synonyms": [
+            "pen collision",
+            "pen click"
+        ],
+        "label_id": 73,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/impact/pen_clicking"
+    },
+    {
+        "id": "wind_chime",
+        "name": "wind chime",
+        "child_ids": [],
+        "synonyms": [
+            "chime",
+            "wind chimes"
+        ],
+        "label_id": 74,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/impact/wind_chime"
+    },
+    {
+        "id": "knife_sharpening",
+        "name": "knife sharpening",
+        "child_ids": [],
+        "synonyms": [
+            "knife grinding",
+            "knife friction",
+            "knife honing"
+        ],
+        "label_id": 75,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/friction/knife_sharpening"
+    },
+    {
+        "id": "sandpaper_scraping",
+        "name": "sandpaper scraping",
+        "child_ids": [],
+        "synonyms": [
+            "sandpaper grinding",
+            "sandpaper friction"
+        ],
+        "label_id": 76,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/friction/sandpaper_scraping"
+    },
+    {
+        "id": "plastic_scratching",
+        "name": "plastic scratching",
+        "child_ids": [],
+        "synonyms": [
+            "plastic grinding",
+            "plastic friction",
+            "plastic scraping"
+        ],
+        "label_id": 77,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/friction/plastic_scratching"
+    },
+    {
+        "id": "string_rubbing",
+        "name": "string rubbing",
+        "child_ids": [],
+        "synonyms": [
+            "string grinding",
+            "string friction"
+        ],
+        "label_id": 78,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/friction/string_rubbing"
+    },
+    {
+        "id": "glass_clinking",
+        "name": "glass clinking",
+        "child_ids": [],
+        "synonyms": [
+            "glass breaking",
+            "glass collision"
+        ],
+        "label_id": 80,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/dropping/glass_clinking"
+    },
+    {
+        "id": "coin_dropping",
+        "name": "coin dropping",
+        "child_ids": [],
+        "synonyms": [
+            "coin falling",
+            "coin collision"
+        ],
+        "label_id": 81,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/dropping/coin_dropping"
+    },
+    {
+        "id": "metal_dropping",
+        "name": "metal dropping",
+        "child_ids": [],
+        "synonyms": [
+            "metal falling",
+            "metal collision",
+            "metal sound"
+        ],
+        "label_id": 82,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/dropping/metal_dropping"
+    },
+    {
+        "id": "firework",
+        "name": "firework",
+        "child_ids": [],
+        "synonyms": [
+            "firecracker",
+            "fireworks",
+            "firework sound",
+            "firework noise",
+            "firework explosion"
+        ],
+        "label_id": 83,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/explosion/firework"
+    },
+    {
+        "id": "gunshot",
+        "name": "gunshot",
+        "child_ids": [],
+        "synonyms": [
+            "gunfire",
+            "gun firing",
+            "gun shooting",
+            "gunshot sound",
+            "gunshot noise"
+        ],
+        "label_id": 84,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/explosion/gunshot"
+    },
+    {
+        "id": "artillery_firing",
+        "name": "artillery firing",
+        "child_ids": [],
+        "synonyms": [
+            "artillery fire",
+            "cannon fire",
+            "cannon firing",
+            "artillery firing"
+        ],
+        "label_id": 101,
+        "seed_audio_dir": "seed_audios/obj_obj_interact/explosion/artillery_firing"
+    },
+    {
+        "id": "human_obj_interact",
+        "name": "human-obj interact",
+        "child_ids": [
+            "tools",
+            "culinary",
+            "work"
+        ],
+        "synonyms": [
+            "human-object interaction"
+        ],
+        "label_id": 6,
+        "seed_audio_dir": "seed_audios/human_obj_interact"
+    },
+    {
+        "id": "tools",
+        "name": "tools",
+        "child_ids": [
+            "hammer_nailing",
+            "wood_sawing",
+            "pen_writing",
+            "wood_chopping",
+            "rasping"
+        ],
+        "synonyms": [
+            "use tool"
+        ],
+        "label_id": 20,
+        "seed_audio_dir": "seed_audios/human_obj_interact/tools"
+    },
+    {
+        "id": "wood_chopping",
+        "name": "wood chopping",
+        "child_ids": [],
+        "synonyms": [
+            "wood cutting",
+            "chopping wood",
+            "cutting wood",
+            "cutting timber",
+            "cutting lumber",
+            "cutting tree"
+        ],
+        "label_id": 88,
+        "seed_audio_dir": "seed_audios/human_obj_interact/tools/wood_chopping"
+    },
+    {
+        "id": "rasping",
+        "name": "rasping",
+        "child_ids": [],
+        "synonyms": [
+            "rasping",
+            "filing",
+            "sanding",
+            "sanding wood",
+            "sanding metal",
+            "sanding plastic"
+        ],
+        "label_id": 103,
+        "seed_audio_dir": "seed_audios/human_obj_interact/tools/rasping"
+    },
+    {
+        "id": "culinary",
+        "name": "culinary",
+        "child_ids": [
+            "dish_audio",
+            "silverware_audio",
+            "food_frying",
+            "vegetable_chopping"
+        ],
+        "synonyms": [
+            "cooking or eating"
+        ],
+        "label_id": 21,
+        "seed_audio_dir": "seed_audios/human_obj_interact/culinary"
+    },
+    {
+        "id": "work",
+        "name": "work",
+        "child_ids": [
+            "keyboard_typing",
+            "cupboard_open_or_close",
+            "drawer_open_or_close",
+            "packing_tape",
+            "door_slamming",
+            "toilet_flushing",
+            "pouring_water",
+            "door_knocking",
+            "dentist_drilling"
+        ],
+        "synonyms": [
+            "working"
+        ],
+        "label_id": 22,
+        "seed_audio_dir": "seed_audios/human_obj_interact/work"
+    },
+    {
+        "id": "toilet_flushing",
+        "name": "toilet flushing",
+        "child_ids": [],
+        "synonyms": [
+            "toilet flush",
+            "flushing toilet",
+            "toilet water flushing",
+            "toilet water sound",
+            "toilet water noise"
+        ],
+        "label_id": 98,
+        "seed_audio_dir": "seed_audios/human_obj_interact/work/toilet_flushing"
+    },
+    {
+        "id": "pouring_water",
+        "name": "pouring water",
+        "child_ids": [],
+        "synonyms": [
+            "water pouring",
+            "filling in liquid water",
+            "filling in can",
+            "filling in bottle",
+            "filling in cup",
+            "filling in glass"
+        ],
+        "label_id": 99,
+        "seed_audio_dir": "seed_audios/human_obj_interact/work/pouring_water"
+    },
+    {
+        "id": "door_knocking",
+        "name": "door knocking",
+        "child_ids": [],
+        "synonyms": [
+            "door knock",
+            "knocking on door",
+            "knock on door",
+            "knock door",
+            "knock on the door"
+        ],
+        "label_id": 104,
+        "seed_audio_dir": "seed_audios/human_obj_interact/work/door_knocking"
+    },
+    {
+        "id": "dentist_drilling",
+        "name": "dentist drilling",
+        "child_ids": [],
+        "synonyms": [
+            "dentist drill",
+            "teeth drilling",
+            "dental drilling",
+            "dental drill",
+            "dentist drill sound"
+        ],
+        "label_id": 105,
+        "seed_audio_dir": "seed_audios/human_obj_interact/work/dentist_drilling"
+    },
+    {
+        "id": "hammer_nailing",
+        "name": "hammer nailing",
+        "child_ids": [],
+        "synonyms": [
+            "hammer hitting",
+            "hammer slapping",
+            "hammer smacking",
+            "hammer punching"
+        ],
+        "label_id": 85,
+        "seed_audio_dir": "seed_audios/human_obj_interact/tools/hammer_nailing"
+    },
+    {
+        "id": "wood_sawing",
+        "name": "wood sawing",
+        "child_ids": [],
+        "synonyms": [
+            "sawing wood",
+            "sawing timber",
+            "sawing lumber",
+            "sawing tree"
+        ],
+        "label_id": 86,
+        "seed_audio_dir": "seed_audios/human_obj_interact/tools/wood_sawing"
+    },
+    {
+        "id": "pen_writing",
+        "name": "pen writing",
+        "child_ids": [],
+        "synonyms": [
+            "pen or pencil writing",
+            "pen or pencil scribbling",
+            "pen or pencil scratching",
+            "pen or pencil drawing"
+        ],
+        "label_id": 87,
+        "seed_audio_dir": "seed_audios/human_obj_interact/tools/pen_writing"
+    },
+    {
+        "id": "dish_audio",
+        "name": "dish audio",
+        "child_ids": [],
+        "synonyms": [
+            "dishware sound",
+            "dishware noise",
+            "dishware clinking",
+            "dishware clanking",
+            "dishware banging"
+        ],
+        "label_id": 89,
+        "seed_audio_dir": "seed_audios/human_obj_interact/culinary/dish_audio"
+    },
+    {
+        "id": "silverware_audio",
+        "name": "silverware audio",
+        "child_ids": [],
+        "synonyms": [
+            "silver utensils sound",
+            "silverware sound",
+            "silver utensils sound",
+            "silver kitchen utensils sound",
+            "silverware noise"
+        ],
+        "label_id": 90,
+        "seed_audio_dir": "seed_audios/human_obj_interact/culinary/silverware_audio"
+    },
+    {
+        "id": "food_frying",
+        "name": "food frying",
+        "child_ids": [],
+        "synonyms": [
+            "food sizzling",
+            "frying food",
+            "frying pan"
+        ],
+        "label_id": 91,
+        "seed_audio_dir": "seed_audios/human_obj_interact/culinary/food_frying"
+    },
+    {
+        "id": "vegetable_chopping",
+        "name": "vegetable chopping",
+        "child_ids": [],
+        "synonyms": [
+            "vegetable cutting",
+            "vegetable slicing",
+            "vegetable dicing"
+        ],
+        "label_id": 92,
+        "seed_audio_dir": "seed_audios/human_obj_interact/culinary/vegetable_chopping"
+    },
+    {
+        "id": "keyboard_typing",
+        "name": "keyboard typing",
+        "child_ids": [],
+        "synonyms": [
+            "typing keyboard",
+            "typing on keyboard",
+            "keyboard typing sound",
+            "keyboard typing noise"
+        ],
+        "label_id": 93,
+        "seed_audio_dir": "seed_audios/human_obj_interact/work/keyboard_typing"
+    },
+    {
+        "id": "cupboard_open_or_close",
+        "name": "cupboard open or close",
+        "child_ids": [],
+        "synonyms": [
+            "cupboard open",
+            "cupboard close",
+            "cupboard opening",
+            "cupboard closing"
+        ],
+        "label_id": 94,
+        "seed_audio_dir": "seed_audios/human_obj_interact/work/cupboard_open_or_close"
+    },
+    {
+        "id": "drawer_open_or_close",
+        "name": "drawer open or close",
+        "child_ids": [],
+        "synonyms": [
+            "drawer open",
+            "drawer close",
+            "drawer opening",
+            "drawer closing"
+        ],
+        "label_id": 95,
+        "seed_audio_dir": "seed_audios/human_obj_interact/work/drawer_open_or_close"
+    },
+    {
+        "id": "packing_tape",
+        "name": "packing tape",
+        "child_ids": [],
+        "synonyms": [
+            "tape",
+            "packing tape sound",
+            "packing tape ripping",
+            "packing tape tearing"
+        ],
+        "label_id": 96,
+        "seed_audio_dir": "seed_audios/human_obj_interact/work/packing_tape"
+    },
+    {
+        "id": "door_slamming",
+        "name": "door slamming",
+        "child_ids": [],
+        "synonyms": [
+            "door slam",
+            "slamming door",
+            "slamming door sound"
+        ],
+        "label_id": 97,
+        "seed_audio_dir": "seed_audios/human_obj_interact/work/door_slamming"
+    },
+    {
+        "id": "music",
+        "name": "music",
+        "child_ids": [
+            "music_instrument",
+            "singing"
+        ],
+        "synonyms": [],
+        "label_id": 3,
+        "seed_audio_dir": "seed_audios/music"
+    },
+    {
+        "id": "music_instrument",
+        "name": "music instrument",
+        "child_ids": [
+            "plucked_string",
+            "piano_keyboard",
+            "bowed_string",
+            "wind_string",
+            "brass",
+            "harmonica",
+            "accordion"
+        ],
+        "synonyms": [
+            "musical instrument"
+        ],
+        "label_id": 12,
+        "seed_audio_dir": "seed_audios/music/music_instrument"
+    },
+    {
+        "id": "singing",
+        "name": "singing",
+        "child_ids": [
+            "female_singing",
+            "male_singing",
+            "child_singing",
+            "group_singing"
+        ],
+        "synonyms": [
+            "singer singing"
+        ],
+        "label_id": 13,
+        "seed_audio_dir": "seed_audios/music/singing"
+    },
+    {
+        "id": "plucked_string",
+        "name": "plucked string",
+        "child_ids": [],
+        "synonyms": [
+            "string plucking"
+        ],
+        "label_id": 50,
+        "seed_audio_dir": "seed_audios/music/music_instrument/plucked_string"
+    },
+    {
+        "id": "piano_keyboard",
+        "name": "piano keyboard",
+        "child_ids": [],
+        "synonyms": [
+            "piano playing",
+            "piano music"
+        ],
+        "label_id": 51,
+        "seed_audio_dir": "seed_audios/music/music_instrument/piano_keyboard"
+    },
+    {
+        "id": "bowed_string",
+        "name": "bowed string",
+        "child_ids": [],
+        "synonyms": [
+            "bowed string",
+            "bowed string instrument",
+            "bowed string playing",
+            "bowed string music"
+        ],
+        "label_id": 52,
+        "seed_audio_dir": "seed_audios/music/music_instrument/bowed_string"
+    },
+    {
+        "id": "wind_string",
+        "name": "wind string",
+        "child_ids": [],
+        "synonyms": [
+            "woodwind string",
+            "wind string instrument",
+            "wind string playing",
+            "wind string music"
+        ],
+        "label_id": 53,
+        "seed_audio_dir": "seed_audios/music/music_instrument/wind_string"
+    },
+    {
+        "id": "brass",
+        "name": "brass",
+        "child_ids": [],
+        "synonyms": [
+            "brass playing",
+            "brass music",
+            "brass instrument"
+        ],
+        "label_id": 54,
+        "seed_audio_dir": "seed_audios/music/music_instrument/brass"
+    },
+    {
+        "id": "harmonica",
+        "name": "harmonica",
+        "child_ids": [],
+        "synonyms": [
+            "harmonica playing",
+            "harmonica music"
+        ],
+        "label_id": 55,
+        "seed_audio_dir": "seed_audios/music/music_instrument/harmonica"
+    },
+    {
+        "id": "accordion",
+        "name": "accordion",
+        "child_ids": [],
+        "synonyms": [
+            "accordion playing",
+            "accordion music"
+        ],
+        "label_id": 56,
+        "seed_audio_dir": "seed_audios/music/music_instrument/accordion"
+    },
+    {
+        "id": "female_singing",
+        "name": "female singing",
+        "child_ids": [],
+        "synonyms": [
+            "girl singing",
+            "woman singing",
+            "female singing",
+            "woman vocal"
+        ],
+        "label_id": 57,
+        "seed_audio_dir": "seed_audios/music/singing/female_singing"
+    },
+    {
+        "id": "male_singing",
+        "name": "male singing",
+        "child_ids": [],
+        "synonyms": [
+            "male singing",
+            "man singing",
+            "male vocal"
+        ],
+        "label_id": 58,
+        "seed_audio_dir": "seed_audios/music/singing/male_singing"
+    },
+    {
+        "id": "child_singing",
+        "name": "child singing",
+        "child_ids": [],
+        "synonyms": [
+            "kid singing",
+            "children singing",
+            "child vocal",
+            "child vocalization",
+            "baby singing"
+        ],
+        "label_id": 59,
+        "seed_audio_dir": "seed_audios/music/singing/child_singing"
+    },
+    {
+        "id": "group_singing",
+        "name": "group singing",
+        "child_ids": [],
+        "synonyms": [
+            "choir singing",
+            "chorus singing",
+            "group song",
+            "group vocal",
+            "group vocalization"
+        ],
+        "label_id": 60,
+        "seed_audio_dir": "seed_audios/music/singing/group_singing"
+    },
+    {
+        "id": "nature",
+        "name": "nature",
+        "child_ids": [
+            "weather",
+            "water",
+            "nature_change"
+        ],
+        "synonyms": [],
+        "label_id": 2,
+        "seed_audio_dir": "seed_audios/nature"
+    },
+    {
+        "id": "weather",
+        "name": "weather",
+        "child_ids": [
+            "rain",
+            "thunder",
+            "wind"
+        ],
+        "synonyms": [],
+        "label_id": 9,
+        "seed_audio_dir": "seed_audios/nature/weather"
+    },
+    {
+        "id": "water",
+        "name": "water",
+        "child_ids": [
+            "water_bubbling",
+            "ocean_wave",
+            "water_dripping",
+            "water_flowing",
+            "water_boiling"
+        ],
+        "synonyms": [],
+        "label_id": 10,
+        "seed_audio_dir": "seed_audios/nature/water"
+    },
+    {
+        "id": "nature_change",
+        "name": "nature change",
+        "child_ids": [
+            "wood_cracking",
+            "rustling_leaves"
+        ],
+        "synonyms": [
+            "natural change"
+        ],
+        "label_id": 11,
+        "seed_audio_dir": "seed_audios/nature/nature_change"
+    },
+    {
+        "id": "rain",
+        "name": "rain",
+        "child_ids": [],
+        "synonyms": [
+            "rainfall",
+            "raining",
+            "rain falling"
+        ],
+        "label_id": 40,
+        "seed_audio_dir": "seed_audios/nature/weather/rain"
+    },
+    {
+        "id": "thunder",
+        "name": "thunder",
+        "child_ids": [],
+        "synonyms": [
+            "thunderstorm",
+            "thundering",
+            "thunder rumbling"
+        ],
+        "label_id": 41,
+        "seed_audio_dir": "seed_audios/nature/weather/thunder"
+    },
+    {
+        "id": "wind",
+        "name": "wind",
+        "child_ids": [],
+        "synonyms": [
+            "wind passing",
+            "wind blowing",
+            "wind sound"
+        ],
+        "label_id": 42,
+        "seed_audio_dir": "seed_audios/nature/weather/wind"
+    },
+    {
+        "id": "water_bubbling",
+        "name": "water bubbling",
+        "child_ids": [],
+        "synonyms": [
+            "water bubble"
+        ],
+        "label_id": 43,
+        "seed_audio_dir": "seed_audios/nature/water/water_bubbling"
+    },
+    {
+        "id": "ocean_wave",
+        "name": "ocean wave",
+        "child_ids": [],
+        "synonyms": [
+            "sea wave",
+            "sea wave sound",
+            "ocean sound"
+        ],
+        "label_id": 44,
+        "seed_audio_dir": "seed_audios/nature/water/ocean_wave"
+    },
+    {
+        "id": "water_dripping",
+        "name": "water dripping",
+        "child_ids": [],
+        "synonyms": [
+            "water drip",
+            "water dropping",
+            "dripping water"
+        ],
+        "label_id": 45,
+        "seed_audio_dir": "seed_audios/nature/water/water_dripping"
+    },
+    {
+        "id": "water_flowing",
+        "name": "water flowing",
+        "child_ids": [],
+        "synonyms": [
+            "water flow"
+        ],
+        "label_id": 46,
+        "seed_audio_dir": "seed_audios/nature/water/water_flowing"
+    },
+    {
+        "id": "wood_cracking",
+        "name": "wood cracking",
+        "child_ids": [],
+        "synonyms": [
+            "wood crack"
+        ],
+        "label_id": 47,
+        "seed_audio_dir": "seed_audios/nature/nature_change/wood_cracking"
+    },
+    {
+        "id": "rustling_leaves",
+        "name": "rustling leaves",
+        "child_ids": [],
+        "synonyms": [
+            "leaves rustling"
+        ],
+        "label_id": 48,
+        "seed_audio_dir": "seed_audios/nature/nature_change/rustling_leaves"
+    },
+    {
+        "id": "water_boiling",
+        "name": "water boiling",
+        "child_ids": [],
+        "synonyms": [
+            "boiling water"
+        ],
+        "label_id": 49,
+        "seed_audio_dir": "seed_audios/nature/water/water_boiling"
+    }
+]

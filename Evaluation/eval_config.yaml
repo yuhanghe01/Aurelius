@@ -1,0 +1,41 @@
+conf_score_thred_list: [0.5, 0.1, 0.9] # [min, step_size, max]
+sample_rate: 16000
+audio_len_sec: 10
+audioeventset_filename: ../AudioEventSet.json
+audiorelset_filename: ../AudioRelSet.json
+refaudio_dir: /datadisk/aurelius/dataset/testset/
+predaudio_dir: /datadisk/aurelius/inference_result/tangoflux_resampled
+refaudio_data_filename: /datadisk/aurelius/dataset/testset/aurelius_test.json
+result_save_dir: /datadisk/aurelius/eval_result/tangoflux_zeroshot
+predaudio_key: tangoflux
+loudness_thred: 0.2
+min_event_lensec: 1.0
+parsimony_weight: 0.1
+main_cate_list: ["Temporality", "Spatiality", "Count", "Nested_Combination", "Compositionality", "Perceptuality"]
+model_path:
+  det110_model_path: /datadisk/aurelius/trained_model/model4eval/panns_det_110class.pth
+  effect7_model_path: /datadisk/aurelius/trained_model/model4eval/panns_classify_7effects.pth
+  pretrained_panns_path: /datadisk/aurelius/trained_model/model4eval/Cnn14_mAP=0.431.pth
+feat_embed_map:
+  KL: vggish
+  FAD: vggish
+  FD: panns
+vggish_config:
+  use_pca: false
+  use_activation: true
+panns_config:
+  sample_rate: 16000
+  window_size: 1024
+  hop_size: 320
+  mel_bins: 64
+  fmin: 50
+  fmax: 8000
+REL_EVAL_CONFIG:
+  Spatiality:
+    closeness_loudness_thred: 0.3
+    farness_loudness_thred: 0.4
+    proximity_loudness_thred: 0.2
+  Perceptuality:
+    balancing_loudness_thred: 0.5
+    blending_loudness_thred: 0.2
+  parsimony_weight: 0.1

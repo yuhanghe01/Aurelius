@@ -1,0 +1,2949 @@
+[
+    {
+        "arity": null,
+        "explanation": "root relation",
+        "id": "Relation_Root",
+        "name": "Relation Root",
+        "child_ids": [
+            "Temporality",
+            "Spatiality",
+            "Count",
+            "Nested_Combination",
+            "Compositionality",
+            "Perceptuality"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": null,
+        "explanation": "temporal relation",
+        "id": "Temporality",
+        "name": "Temporality",
+        "child_ids": [
+            "Precedence",
+            "Succession",
+            "Simultaneity",
+            "Periodicity"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 2,
+        "explanation": "before",
+        "id": "Precedence",
+        "name": "Precedence",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio followed by {B} audio",
+            "create an audio sequence starting with {A} audio and then followed by {B} audio",
+            "make an audio recording play {A} audio initially, {B} audio afterwards",
+            "generate {B} audio preceded by {A} audio",
+            "produce an audio recording with {A} audio in the beginning, {B} audio coming next"
+        ],
+        "event_rule_code": "Ab",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            0
+        ],
+        "parent_label": [
+            0
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "after",
+        "id": "Succession",
+        "name": "Succession",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {B} audio first, then followed by another {A} audio",
+            "create an audio sequence starting with {B} audio and then followed by {A} audio",
+            "make an audio recording play {B} audio initially, {A} audio afterwards",
+            "generate {A} audio preceded by {B} audio",
+            "produce an audio recording with {B} audio at the beginning, {A} audio coming next"
+        ],
+        "event_rule_code": "Ab",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            1
+        ],
+        "parent_label": [
+            0
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "together",
+        "id": "Simultaneity",
+        "name": "Simultaneity",
+        "child_ids": [],
+        "text_prompt_template": [
+            "create {A} audio and {B} audio at the same time",
+            "produce {A} audio and {B} audio simultaneously",
+            "generate audio for {A} audio and {B} audio concurrently",
+            "create audio tracks for {A} audio and {B} audio in parallel",
+            "produce {A} audio and {B} audio together"
+        ],
+        "event_rule_code": "Ab",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            2
+        ],
+        "parent_label": [
+            0
+        ]
+    },
+    {
+        "arity": 1,
+        "explanation": "repetitively or sporadically generate",
+        "id": "Periodicity",
+        "child_ids": [],
+        "name": "Periodicity",
+        "text_prompt_template": [
+            "generate {A} audio in a continuous loop",
+            "create {A} audio repeatedly in a cyclic pattern",
+            "produce {A} audio in a repeated cyclic sequence",
+            "produce {A} audio in a recurring cycle",
+            "keep generating {A} audio repetitively and intermittently"
+        ],
+        "event_rule_code": "A",
+        "event_max_timelen_code": "5",
+        "child_label": [
+            3
+        ],
+        "parent_label": [
+            0
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "count",
+        "id": "Count",
+        "name": "Count",
+        "child_ids": [
+            "Number"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": "N-arity",
+        "explanation": "number",
+        "id": "Number",
+        "name": "Number",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio events, including {B}",
+            "create {A} audio clips, they are {B}",
+            "totally produce {A} audio samples: {B}",
+            "generate {A} audio events, among them are {B}, respectively",
+            "please create {A} audio events, involving {B}"
+        ],
+        "event_rule_code": null,
+        "event_max_timelen_code": null,
+        "child_label": [
+            4
+        ],
+        "parent_label": [
+            2
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "Perceptual Relation",
+        "id": "Perceptuality",
+        "name": "Perceptuality",
+        "child_ids": [
+            "Balancing",
+            "Blending",
+            "Reverberation",
+            "TimeStretching",
+            "Amplification",
+            "Attenuation"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 2,
+        "explanation": "blance two audios",
+        "id": "Balancing",
+        "name": "Balancing",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio event first then {B} audio event, where {A} is the foreground and {B} is the background",
+            "create {A} audio event followed by {B} audio event, {A} is the dominating sound while {B} is the reduced background sound",
+            "generate the loud {A} audio, followed by much lessly loud {B} audio",
+            "first generate {A} audio with very high volume, then generate {B} audio with very low volume",
+            "initially create a loud {A} audio, then create a nearly quiet {B} audio"
+        ],
+        "event_rule_code": "Ab",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            5
+        ],
+        "parent_label": [
+            3
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "blend two audios to be indistinguishable",
+        "id": "Blending",
+        "name": "Blending",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio first and then {B} audio, once we mix {A} audio and {B} audio together, we can hardly split",
+            "create a sequential audio containing both {A} audio first and {B} audio afterwards, if they are mixed together they become indistinguishable",
+            "produce two audios: {A} audio at the beginning and {B} audio in the end, if the two audios are mixed together, then the mixed audio becomes hard to split apart",
+            "generate an audio tracking that sequentially includes {A} audio first and followed by {B} audio, they two audios are hard to distinguish if blend together",
+            "produce an audio track containing both {A} audio at the beginning and {B} audio comes next, if the two audios are mixed together then the mixed audio becomes indistinguishable"
+        ],
+        "event_rule_code": "Ab",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            6
+        ],
+        "parent_label": [
+            3
+        ]
+    },
+    {
+        "arity": 1,
+        "explanation": "reverberation",
+        "id": "Reverberation",
+        "name": "Reverberation",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio in the canyon with strong reverberation effect",
+            "create {A} audio in a large and spacious room that is full of reverberation",
+            "produce {A} audio with strong echo effect, seems like it is in a large reverberant space",
+            "generate a reverberant {A} audio with high echo effect, as if it is in a large hall",
+            "create {A} audio that is reverberant and echoic, as if it is heard in a canyon"
+        ],
+        "event_rule_code": "A",
+        "event_max_timelen_code": "5",
+        "child_label": [
+            7
+        ],
+        "parent_label": [
+            3
+        ]
+    },
+    {
+        "arity": 1,
+        "explanation": "TimeStretching",
+        "id": "TimeStretching",
+        "name": "TimeStretching",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio that is stretched in time and elongated",
+            "create {A} audio with time stretching effect, so that it is elongated in time and listened slowly",
+            "produce time-stretched {A} audio event, it is expanded and elongated in time",
+            "create the {A} audio with obvious time stretching effect, so that the speed is slowed down when we listen",
+            "generate {A} audio that is time stretched and elongated, so that it is listened slowly"
+        ],
+        "event_rule_code": "A",
+        "event_max_timelen_code": "5",
+        "child_label": [
+            8
+        ],
+        "parent_label": [
+            3
+        ]
+    },
+    {
+        "arity": 1,
+        "explanation": "amplification",
+        "id": "Amplification",
+        "name": "Amplification",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio first, then follow by another {A}, where the later {A} audio that is more amplified and louder than the first {A} audio",
+            "create a normal {A} audio first, the continue to create another {A} audio with much amplification effect",
+            "produce a normal {A} audio at the beginning, followed by another {A} audio that is much louder than the first audio",
+            "create the first {A} audio with normal loudness, then continue to create another much louder {A} audio",
+            "sequential generate one {A} audio and another {A} audio, where the second {A} audio is much more amplified than the first {A} audio"
+        ],
+        "event_rule_code": "A",
+        "event_max_timelen_code": "5",
+        "child_label": [
+            9
+        ],
+        "parent_label": [
+            3
+        ]
+    },
+    {
+        "arity": 1,
+        "explanation": "attenuation",
+        "id": "Attenuation",
+        "name": "Attenuation",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio that is attenuated and nearly quiet",
+            "create {A} audio with obvious attenuation effect, so that it is quiet and hard to hear",
+            "produce a quiet {A} audio event, so that it is attenuated and hard to hear clearly",
+            "create the loudness damped {A} audio with obvious attenuation effect, so that it is quiet and hard to hear when we listen",
+            "generate a quiet {A} audio with obvious loudness attenuation"
+        ],
+        "event_rule_code": "A",
+        "event_max_timelen_code": "5",
+        "child_label": [
+            10
+        ],
+        "parent_label": [
+            3
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "spatial relation",
+        "id": "Spatiality",
+        "name": "Spatiality",
+        "child_ids": [
+            "Closeness",
+            "Farness",
+            "Proximity",
+            "Approaching",
+            "Departuring"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 2,
+        "explanation": "close",
+        "id": "Closeness",
+        "name": "Closeness",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio first, then the same {B} audio, ensuring that {A} audio is closer to the listener",
+            "sequentially generate {A} audio first and {B} audio second, where {A} audio is closer to the listener than {B} audio",
+            "generate {A} audio at the beginning, then continue to generate the same {B} audio, the {A} audio has to be spatially closer to the listener",
+            "first generate {A} audio that is closer to the listener, then generate the same {B} audio that is farther away",
+            "create a spatially close {A} audio, followed by the same {B} audio that is spatially far away"
+        ],
+        "event_rule_code": "AA",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            11
+        ],
+        "parent_label": [
+            1
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "far",
+        "id": "Farness",
+        "name": "Farness",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio first, then the same {B} audio, ensuring that {A} audio is farther away from the listener than {B} audio",
+            "sequentially generate {A} audio and another {B} audio, where {B} audio is closer to the listener than {A} audio",
+            "at the beginning, generate {A} audio that is spatially distant, then continue to generate the same {B} audio that is spatially close",
+            "first generate {A} audio that is farther away from the listener, then generate the same {B} audio that is closer",
+            "create a spatially far {A} audio, followed by the same {B} audio that is spatially much closer"
+        ],
+        "event_rule_code": "AA",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            12
+        ],
+        "parent_label": [
+            1
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "equal distance",
+        "id": "Proximity",
+        "name": "Proximity",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio first, then the same {B} audio, ensuring that the first {A} audio and the second {B} audio are of similar distance from the listener",
+            "sequentially generate {A} audio and another {B} audio, the first {A} audio and the second {B} audio are at the same distance from the listener when we listen to them",
+            "at first, generate {A} audio that is spatially at certain distance, then continue to generate another {B} audio that lies at the same distance",
+            "first generate {A} audio, then generate another {B} audio, the two audios are at the same or close distance from the listener",
+            "generate two non-overlapping audios that are of the same distance to the listener, first {A} audio then another {B} audio"
+        ],
+        "event_rule_code": "AA",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            13
+        ],
+        "parent_label": [
+            1
+        ]
+    },
+    {
+        "arity": 1,
+        "explanation": "approaching",
+        "id": "Approaching",
+        "name": "Approaching",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio that is moving closer to the listener",
+            "create {A} audio that advances toward the listener",
+            "generate {A} audio that gives the impression of moving close",
+            "produce {A} audio that simulates coming closer motion property",
+            "generate {A} audio that undergoes approaching motion characteristic"
+        ],
+        "event_rule_code": "A",
+        "event_max_timelen_code": "5",
+        "child_label": [
+            14
+        ],
+        "parent_label": [
+            1
+        ]
+    },
+    {
+        "arity": 1,
+        "explanation": "departuring",
+        "id": "Departuring",
+        "name": "Departuring",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio that is moving away from the listener",
+            "create {A} audio that is fading into the distance",
+            "generate {A} audio that gives the impression of receding or departing",
+            "produce {A} audio that drifts away over time",
+            "produce {A} audio that simulates moving farther into the distance with respect to the listener"
+        ],
+        "event_rule_code": "A",
+        "event_max_timelen_code": "5",
+        "child_label": [
+            15
+        ],
+        "parent_label": [
+            1
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "composition relation",
+        "id": "Compositionality",
+        "name": "Compositionality",
+        "child_ids": [
+            "Conjunction",
+            "Disjunction",
+            "Negation",
+            "ExclusiveOr",
+            "Implication"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 2,
+        "explanation": "and",
+        "id": "Conjunction",
+        "name": "Conjunction",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio and {B} audio together",
+            "produce {A} audio clip and {B} audio clip together",
+            "create an audio for {A} audio sample and {B} audio sample",
+            "create an audio containing both {A} audio and {B} audio",
+            "generate an audio tracking for {A} audio and {B} audio"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            16
+        ],
+        "parent_label": [
+            4
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "or",
+        "id": "Disjunction",
+        "name": "Disjunction",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or {B} audio, or both",
+            "create an audio containing either {A} audio or {B} audio, or containing the two at the same time",
+            "produce {A} audio or {B} audio sample, you can also generate two of them together",
+            "either to generate {A} audio or generate {B} audio, it is also acceptable of the two audios co-exist",
+            "create an audio tracking containing either {A} audio or {B} audio, but it is fine to contain the two audio at the same time"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            17
+        ],
+        "parent_label": [
+            4
+        ]
+    },
+    {
+        "arity": 1,
+        "explanation": "not",
+        "id": "Negation",
+        "name": "Negation",
+        "child_ids": [],
+        "text_prompt_template": [
+            "do not generate {A} audio",
+            "not create {A} audio, but any other audio is fine",
+            "please do not generate {A} audio sample",
+            "skip generating {A} audio",
+            "avoid generating {A} audio"
+        ],
+        "event_rule_code": "A",
+        "event_max_timelen_code": "5",
+        "child_label": [
+            18
+        ],
+        "parent_label": [
+            4
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "exclusive or",
+        "id": "ExclusiveOr",
+        "name": "ExclusiveOr",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or generate {B} audio, remember not to generate both of them",
+            "create {A} audio or {B} audio, but not both",
+            "produce an audio clip containing either {A} audio or {B} audio, do not contain both of them",
+            "either to generate {A} audio or generate {B} audio, be careful do not generate both of them",
+            "create {A} audio or {B} audio, it is unacceptable to generate both"
+        ],
+        "event_rule_code": "Ab",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            19
+        ],
+        "parent_label": [
+            4
+        ]
+    },
+    {
+        "arity": 3,
+        "explanation": "if-then-else",
+        "id": "Implication",
+        "name": "Implication",
+        "child_ids": [],
+        "text_prompt_template": [
+            "continue to generate {B} audio if generated {A} audio else just generate {C} audio",
+            "if generated {A} audio, then continue to generate {B} audio else to generate {C} audio",
+            "just generate {C} audio if can not generate {A} audio else further genetate {B} audio",
+            "produce {B} audio if {A} audio has been generated, otherwise simply generate {C} audio",
+            "generate {B} audio if {A} audio is present, otherwise simply create {C} audio"
+        ],
+        "event_rule_code": "ABc",
+        "event_max_timelen_code": "555",
+        "child_label": [
+            20
+        ],
+        "parent_label": [
+            4
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "nested combination relation",
+        "id": "Nested_Combination",
+        "name": "Nested_Combination",
+        "child_ids": [
+            "Binary_Arity",
+            "Ternary_Arity",
+            "Quaternary_Arity",
+            "Quinary_Arity"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": null,
+        "explanation": "binary arity in nested combination",
+        "id": "Binary_Arity",
+        "name": "Binary_Arity",
+        "child_ids": [
+            "Temp_Spat_Binary",
+            "Temp_Percep_Binary",
+            "Percep_Comp_Binary",
+            "Spat_Comp_Binary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": null,
+        "explanation": "spatial compositional binary arity in nested combination",
+        "id": "Spat_Comp_Binary",
+        "name": "Spat_Comp_Binary",
+        "child_ids": [
+            "Approaching_Conjunction_Both_Binary",
+            "Departuring_Conjunction_Both_Binary",
+            "Approaching_Departuring_Conjunction_Binary",
+            "Approaching_Departuring_ExclusiveOr_Binary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 2,
+        "explanation": "approaching plus conjunction in binary nested combination",
+        "id": "Approaching_Conjunction_Both_Binary",
+        "name": "Approaching_Conjunction_Both_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio which is moving closer to the listener, followed by generating {B} audio which is also approaching the listener",
+            "generate an audio clip of {A} approaching the listener, followed by another clip of {B} moving closer to the listener",
+            "produce {A} audio that sounds like it's coming closer to the listener, and then generate {B} audio with a similar approaching effect",
+            "synthesize {A} audio that moves nearer to the listener, followed by {B} audio that also gives the impression of approaching",
+            "create an auditory scene where {A} audio comes closer to the listener, then continue with {B} audio with the same approaching effect"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            14,
+            16,
+            21
+        ],
+        "parent_label": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "departuring plus conjunction in binary nested combination",
+        "id": "Departuring_Conjunction_Both_Binary",
+        "name": "Departuring_Conjunction_Both_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio which is moving away from the listener, followed by generating {B} audio which is also moving away",
+            "generate an audio sequence where {A} moves farther from the listener, followed by {B} moving away as well",
+            "produce {A} audio that sounds like it is receding from the listener, immediately followed by {B} audio that also fades into the distance",
+            "create an auditory effect where {A} moves farther away from the listener, followed by {B} audio retreating in a similar manner",
+            "create {A} audio that moves away from the listener, then produce {B} audio that also sounds like it's receding"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            15,
+            16,
+            22
+        ],
+        "parent_label": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "approaching plus departuring plus conjunction in binary nested combination",
+        "id": "Approaching_Departuring_Conjunction_Binary",
+        "name": "Approaching_Departuring_Conjunction_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio which is moving away from the listener, followed by generating {B} audio which is moving closer to the listener",
+            "generate an audio sequence where {A} recedes from the listener, followed by {B} moving closer",
+            "synthesize {A} audio that sounds like it is moving closer, followed by {B} audio that gives the impression of departuring the listener",
+            "produce {A} audio that fades into the distance, followed by {B} audio drawing nearer to the listener",
+            "create an auditory effect where {A} is advancing towards to the listener, followed by {B} audio moving away from the listener"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            14,
+            15,
+            16,
+            23
+        ],
+        "parent_label": [
+            1,
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "approaching plus departuring plus exclusiveor in binary nested combination",
+        "id": "Approaching_Departuring_ExclusiveOr_Binary",
+        "name": "Approaching_Departuring_ExclusiveOr_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio which is moving away from the listener, or exclusively generating {B} audio which is moving closer to the listener",
+            "create either {A} audio that moves away from the listener or {B} audio that approaches the listener",
+            "generate {A} audio that recedes from the listener, or alternatively, produce {B} audio that moves closer",
+            "produce an auditory effect with either {A} audio retreating from the listener or {B} audio advancing toward them",
+            "create an audio sequence featuring either {A} audio moving close or {B} audio fading in distance"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            14,
+            15,
+            19,
+            24
+        ],
+        "parent_label": [
+            1,
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "temporal spatial binary arity in nested combination",
+        "id": "Temp_Spat_Binary",
+        "name": "Temp_Spat_Binary",
+        "child_ids": [
+            "Precedence_Approaching_Binary",
+            "Precedence_Departuring_Binary",
+            "Succession_Approaching_Binary",
+            "Succession_Departuring_Binary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 2,
+        "explanation": "precedence plus approach in binary nested combination",
+        "id": "Precedence_Approaching_Binary",
+        "name": "Precedence_Approaching_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio followed by {B} audio, where {A} audio is moving toward listener",
+            "create an audio sequence starting with {A} audio and then followed by {B} audio, {A} audio is approaching the listener",
+            "make an audio recording play {A} audio that is moving close to the listener initially, {B} audio afterwards",
+            "generate {B} audio preceded by {A} audio, where {A} audio is moving toward listener",
+            "produce an audio recording with {A} audio at the beginning, {B} audio coming next, {A} audio is approaching the listener"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            0,
+            14,
+            25
+        ],
+        "parent_label": [
+            0,
+            1,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "precedence plus departuring in binary nested combination",
+        "id": "Precedence_Departuring_Binary",
+        "name": "Precedence_Departuring_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio followed by {B} audio, where {A} audio is moving away from the listener",
+            "create an audio sequence starting with {A} audio and then followed by {B} audio, {A} audio is departing from the listener",
+            "make an audio recording plays {A} audio that is moving away from the listener initially, then plays {B} audio afterwards",
+            "generate {B} audio preceded by {A} audio, where {A} audio is moving to distance from the listener",
+            "produce an audio recording with {A} audio in the beginning, {B} audio coming next, {A} audio is departing from the listener"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            0,
+            15,
+            26
+        ],
+        "parent_label": [
+            0,
+            1,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "succession plus approaching in binary nested combination",
+        "id": "Succession_Approaching_Binary",
+        "name": "Succession_Approaching_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {B} audio followed by {A} audio, where {A} audio is moving toward the listener",
+            "create an audio sequence starting with {B} audio and then followed by {A} audio, while {A} audio is approaching the listener",
+            "make an audio recording play {B} audio fist, after that making {A} audio undergoing motion toward the listener",
+            "generate {A} audio preceded by {B} audio, where {A} audio is continuously moving closer and closer",
+            "produce an audio recording with {B} audio at the beginning, {A} audio coming next and moving toward the audio listener"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            1,
+            14,
+            27
+        ],
+        "parent_label": [
+            0,
+            1,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "succession plus departuring in binary nested combination",
+        "id": "Succession_Departuring_Binary",
+        "name": "Succession_Departuring_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {B} audio followed by {A} audio, where {A} audio is moving away to distance from listener",
+            "create an audio sequence starting with {B} audio and then followed by {A} audio, while {A} audio is departing in distance",
+            "make an audio recording play {B} audio first, after that making {A} audio undergoing motion away from the listener",
+            "generate {A} audio preceded by {B} audio, where {A} audio is continuously moving farther and farther",
+            "produce an audio recording with {B} audio at the beginning, {A} audio coming next and moving away from the audio listener"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            1,
+            15,
+            28
+        ],
+        "parent_label": [
+            0,
+            1,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "temporality plus perception for binary nested combination",
+        "id": "Temp_Percep_Binary",
+        "name": "Temp_Percep_Binary",
+        "child_ids": [
+            "Precedence_Reverberation_Binary",
+            "Precedence_TimeStretching_Binary",
+            "Precedence_Amplification_Binary",
+            "Precedence_Attenuation_Binary",
+            "Succession_Reverberation_Binary",
+            "Succession_TimeStretching_Binary",
+            "Succession_Amplification_Binary",
+            "Succession_Attenuation_Binary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 2,
+        "explanation": "precedence plus reverberation in binary nested combination",
+        "id": "Precedence_Reverberation_Binary",
+        "name": "Precedence_Reverberation_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio followed by {B} audio, where {A} audio is reverberated with obvious echo effect",
+            "create an audio sequence starting with reverberant {A} audio in the canyon and then followed by normal {B} audio",
+            "make an audio recording play {A} audio that is reverberated initially, {B} audio afterwards",
+            "generate {B} audio preceded by {A} audio, where {A} audio is with reverberation effect like in a large hall",
+            "produce an audio recording with {A} audio in the beginning, {B} audio coming next. In the audio recording, {A} audio is spatially reverberant"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            0,
+            7,
+            29
+        ],
+        "parent_label": [
+            0,
+            3,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "precedence plus time-stretching in binary nested combination",
+        "id": "Precedence_TimeStretching_Binary",
+        "name": "Precedence_TimeStretching_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio followed by {B} audio, where {A} audio is time-stretched and elongated",
+            "create an audio sequence starting with time-stretched {A} audio and then followed by normal {B} audio",
+            "make an audio recording play {A} audio that is time-stretched and listens very slow in speed initially, {B} audio afterwards",
+            "generate {B} audio preceded by {A} audio, where {A} audio is time-stretched and elongated",
+            "produce an audio recording with {A} audio in the beginning, {B} audio coming next. Moreover, {A} audio is time-stretched and elongated"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            0,
+            8,
+            30
+        ],
+        "parent_label": [
+            0,
+            3,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "precedence plus amplification in binary nested combination",
+        "id": "Precedence_Amplification_Binary",
+        "name": "Precedence_Amplification_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio followed by {B} audio, where {A} audio itself is amplified and loud",
+            "create an audio sequence starting with amplified and loudness-enhanced {A} audio and then followed by normal {B} audio",
+            "make an audio recording play {A} audio that is amplified and loud initially, {B} audio afterwards",
+            "generate {B} audio preceded by {A} audio, where {A} audio is amplified and loud",
+            "produce an audio recording with {A} audio in the beginning, {B} afterwards. Moreover, {A} audio is loudness more amplified than {B} audio"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            0,
+            9,
+            31
+        ],
+        "parent_label": [
+            0,
+            3,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "precedence plus attenuation in binary nested combination",
+        "id": "Precedence_Attenuation_Binary",
+        "name": "Precedence_Attenuation_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio followed by {B} audio, where {A} audio is attenuated and nearly quiet",
+            "create an audio sequence starting with attenuated and nearly quiet {A} audio and then followed by another normal {B} audio",
+            "make an audio recording play {A} audio that is attenuated and nearly quiet initially, another normal {B} audio afterwards",
+            "generate {B} audio preceded by {A} audio, where {A} audio is much more attenuated than {B} audio and is nearly quiet",
+            "produce an audio recording with {A} audio in the beginning, {B} audio afterwards. Moreover, {A} audio is amplitude much attenuated"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            0,
+            10,
+            32
+        ],
+        "parent_label": [
+            0,
+            3,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "succession plus reverberation in binary nested combination",
+        "id": "Succession_Reverberation_Binary",
+        "name": "Succession_Reverberation_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {B} audio followed by {A} audio, where {A} audio is reverberated with obvious echo effect",
+            "create an audio sequence starting with normal {B} audio and then followed by reverberant {A} audio that listens like in a large spacious room",
+            "make an audio recording play {B} audio first, then play reverberated {A} audio afterwards",
+            "generate {A} audio preceded by {B} audio, where {A} audio has strong reverberation effect",
+            "produce an audio recording with {B} audio in the beginning, {A} audio coming next and {A} audio is spatially heavily reverberated"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            1,
+            7,
+            33
+        ],
+        "parent_label": [
+            0,
+            3,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "succession plus time-stretching in binary nested combination",
+        "id": "Succession_TimeStretching_Binary",
+        "name": "Succession_TimeStretching_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {B} audio followed by {A} audio, {A} audio has to be time-stretched and elongated",
+            "create an audio sequence starting with normal {B} audio and then followed by time-stretched {A} audio that listens very slow in speed",
+            "make an audio recording play {B} audio first, then continue to make another time-stretched {A} audio",
+            "generate {A} audio preceded by {B} audio, where {A} audio is time-stretched and elongated",
+            "produce an audio recording with {B} audio in the beginning, {A} audio coming next and {A} audio is time-stretched and elongated"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            1,
+            8,
+            34
+        ],
+        "parent_label": [
+            0,
+            3,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "succession plus amplification in binary nested combination",
+        "id": "Succession_Amplification_Binary",
+        "name": "Succession_Amplification_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {B} audio followed by {A} audio, {A} audio has to be amplified and loud when listened",
+            "create an audio sequence starting with normal {B} audio and then followed by amplified and loud {A} audio",
+            "make an audio recording play {B} audio first, then play amplified and loud {A} audio afterwards",
+            "generate {A} audio preceded by {B} audio, where {A} audio is amplified and loud",
+            "produce an audio recording with {B} audio in the beginning, {A} audio coming next and {A} audio is loud and clear"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            1,
+            9,
+            35
+        ],
+        "parent_label": [
+            0,
+            3,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "succession plus attenuation in binary nested combination",
+        "id": "Succession_Attenuation_Binary",
+        "name": "Succession_Attenuation_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {B} audio followed by {A} audio, {A} audio has to be attenuated and almost quiet",
+            "create an audio sequence starting with normal {B} audio and then followed by attenuated and nearly quiet {A} audio",
+            "make an audio recording play {B} audio first, then play the amplitude attenuated {A} audio afterwards",
+            "generate {A} audio preceded by {B} audio, where {A} audio is attenuated and listens very weak",
+            "produce an audio recording with {B} audio in the beginning, {A} audio coming next and {A} audio is amplitude damped and hard to hear"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            1,
+            10,
+            36
+        ],
+        "parent_label": [
+            0,
+            3,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "perception plus compositionality for binary nested combination",
+        "id": "Percep_Comp_Binary",
+        "name": "Percep_Comp_Binary",
+        "child_ids": [
+            "Reverberation_Conjunction_Binary",
+            "Reverberation_Disjunction_Binary",
+            "Reverberation_ExclusiveOr_Binary",
+            "TimeStretching_Conjunction_Binary",
+            "TimeStretching_Disjunction_Binary",
+            "TimeStretching_ExclusiveOr_Binary",
+            "Amplification_Conjunction_Binary",
+            "Amplification_Disjunction_Binary",
+            "Amplification_ExclusiveOr_Binary",
+            "Attenuation_Conjunction_Binary",
+            "Attenuation_Disjunction_Binary",
+            "Attenuation_ExclusiveOr_Binary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 2,
+        "explanation": "reverberation plus conjunction in binary nested combination",
+        "id": "Reverberation_Conjunction_Binary",
+        "name": "Reverberation_Conjunction_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio followed by {B} audio together, where {A} audio is reverberated with echo effect and {B} audio is also reverberated",
+            "create an audio containing {A} audio first then {B} audio afterwards, the two audios are reverberated and echoic",
+            "produce reverberant {A} audio first, then reverberant {B} audio, hearing like both are in a large hall",
+            "generate an audio tracking containing {A} audio at the beginning and {B} audio in the end, they are both reverberant and like in the canyon",
+            "create a reverberated audio track first comes with {A} audio and then comes with {B} audio, the two audios are themselves reverberated and echoic"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            7,
+            16,
+            37
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "reverberation plus disjunction in binary nested combination",
+        "id": "Reverberation_Disjunction_Binary",
+        "name": "Reverberation_Disjunction_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or {B} audio, or the two audios at the same time, {A} audio is reverberated with echo effect and {B} audio is also reverberated",
+            "create an audio containing either {A} audio or {B} audio (or both), the two audios are with high reverberation effect",
+            "produce reverberant {A} audio or {B} audio, hearing like they are in a large hall. Optionally, produce both of them that are reverberated",
+            "generate an echoic audio tracking for {A} audio or {B} audio, you can also generate the two audios simultaneously, they are both reverberated and like in the canyon",
+            "create a reverberated audio track containing either {A} audio or {B} audio, or {A} audio and {B} audio, the two audios to be generated are reverberated and echoic"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            7,
+            17,
+            38
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "reverberation plus exclusive or in binary nested combination",
+        "id": "Reverberation_ExclusiveOr_Binary",
+        "name": "Reverberation_ExclusiveOr_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or generate {B} audio, remember not to generate both of them, {A} audio is reverberated with echo effect and {B} audio is also reverberated",
+            "create {A} audio or {B} audio, but not both, the two audios are with high reverberation effect",
+            "produce an audio clip containing either {A} audio or {B} audio, do not contain both of them, they are both reverberated",
+            "either to generate {A} audio or generate {B} audio, be careful do not generate both of them, they are both reverberated and echoic",
+            "create {A} audio or {B} audio, it is unacceptable to generate both, the two audios are reverberated and echoic"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            7,
+            19,
+            39
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "time-stretching plus conjunction in binary nested combination",
+        "id": "TimeStretching_Conjunction_Binary",
+        "name": "TimeStretching_Conjunction_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio first and then {B} audio, where {A} audio is time-stretched and elongated and {B} audio is also time-stretched",
+            "create an audio containing {A} audio at the beginning and {B} audio in the end, the two audios are time-stretched and elongated",
+            "produce time-stretched {A} audio first and {B} audio afterwards, hearing like both are listened slowly",
+            "generate an audio tracking with {A} audio comes at first and {B} audio comes afterwards, they are both time-stretched and elongated",
+            "create a time-stretched audio track containing {A} audio at first and {B} audio next, the two audios are themselves time-stretched and elongated"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            8,
+            16,
+            40
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "time-stretching plus disjunction in binary nested combination",
+        "id": "TimeStretching_Disjunction_Binary",
+        "name": "TimeStretching_Disjunction_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or {B} audio, or the two audios at the same time, the two audios are time-stretched and elongated",
+            "create an audio containing either {A} audio or {B} audio (or both {A} audio and {B} audio), the two audios are time-stretched and listen slowly",
+            "produce time-stretched {A} audio or {B} audio, hearing like they are listened slowly. Optionally, produce both of them that are time-stretched and elongated",
+            "generate an audio tracking for {A} audio or {B} audio, you can also generate the two audios simultaneously, they are both time-stretched and elongated",
+            "create a time-stretched audio track containing either {A} audio or {B} audio, or {A} audio and {B} audio, the two audios to be generated are time-stretched and elongated"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            8,
+            17,
+            41
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "time-stretching plus exclusive or in binary nested combination",
+        "id": "TimeStretching_ExclusiveOr_Binary",
+        "name": "TimeStretching_ExclusiveOr_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or generate {B} audio, remember not to generate both of them, the two audios are time-stretched and elongated",
+            "create {A} audio or {B} audio, but not both, the two audios are time-stretched and listen slowly",
+            "produce an audio clip containing either {A} audio or {B} audio, do not contain both of them, the two audios are time-stretched and elongated",
+            "either to generate {A} audio or generate {B} audio, be careful do not generate both of them, the two audios are time-stretched and elongated",
+            "create {A} audio or {B} audio, it is not correct to generate both, the two audios are time-stretched and elongated"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            8,
+            19,
+            42
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "amplification plus conjunction in binary nested combination",
+        "id": "Amplification_Conjunction_Binary",
+        "name": "Amplification_Conjunction_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio first and then {B} audio afterwards, where {A} audio is amplified and loud and {B} audio is also amplified and loud",
+            "create an audio containing with {A} audio comes first and {B} audio comes in the last, the two audios are amplified and loud",
+            "produce amplified {A} audio at the beginning {B} audio in the end, hearing like both are loud and clear",
+            "generate an audio tracking in which {A} audio happens first and {B} audio happens next, they are both amplified and loud",
+            "create an amplified audio track first containing {A} audio, then containing {B} audio, the two audios are themselves amplified and loud"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            9,
+            16,
+            43
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "amplification plus disjunction in binary nested combination",
+        "id": "Amplification_Disjunction_Binary",
+        "name": "Amplification_Disjunction_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or {B} audio, or the two audios at the same time, the two audios are with enhanced loudness and amplified",
+            "create an audio containing either {A} audio or {B} audio (or both {A} audio and {B} audio), the two audios are amplified and loud",
+            "produce amplified {A} audio or {B} audio, hearing like they are loud and clear. Optionally, produce both of them that are amplified and loud",
+            "generate an audio tracking for {A} audio or {B} audio, you can also generate the two audios simultaneously, they are both amplified and loud",
+            "create an amplified audio track containing either {A} audio or {B} audio, or {A} audio and {B} audio, the two audios to be generated are amplified and loud"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            9,
+            17,
+            44
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "amplification plus exclusive or in binary nested combination",
+        "id": "Amplification_ExclusiveOr_Binary",
+        "name": "Amplification_ExclusiveOr_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or generate {B} audio, remember not to generate both of them, the two audios are amplified and loud",
+            "create {A} audio or {B} audio, but not both, the two audios are amplified and loud",
+            "produce an audio clip containing either {A} audio or {B} audio, do not contain both of them, the two audios are amplified and loud",
+            "either to generate {A} audio or generate {B} audio, be careful do not generate both of them, the two audios are amplified and loud",
+            "create {A} audio or {B} audio, it is not correct to generate both, the two audios are amplified and loud"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            9,
+            19,
+            45
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "attenuation plus conjunction in binary nested combination",
+        "id": "Attenuation_Conjunction_Binary",
+        "name": "Attenuation_Conjunction_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate the {A} audio followed by another {B} audio, while the first {A} audio is attenuated and nearly quiet but {B} audio is attenuated too",
+            "create one {A} audio that is heavily attenuated and nearly silent, followed by another {B} audio that is almost quiet",
+            "generate a sequence starting with a very quiet {A} audio, followed by {B} audio with reduced volume as well",
+            "produce {A} audio that is faint and almost inaudible, then {B} audio that is also almost inaudible",
+            "synthesize {A} audio with reduced volume, making it nearly silent, followed by {B} audio that is also generated at reduced volume"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            10,
+            16,
+            46
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "attenuation plus disjunction in binary nested combination",
+        "id": "Attenuation_Disjunction_Binary",
+        "name": "Attenuation_Disjunction_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or {B} audio, or the two audios at the same time, the two audios are amplitude damped and hard to hear",
+            "create an audio containing either {A} audio or {B} audio (or both {A} audio and {B} audio), the two audios are attenuated and nearly quiet",
+            "produce attenuated {A} audio or {B} audio, hearing like they are hard to hear. Optionally, produce both of them that are attenuated and nearly quiet",
+            "generate an audio tracking for {A} audio or {B} audio, you can also generate the two audios simultaneously, they are both attenuated and nearly quiet",
+            "create an attenuated audio track containing either {A} audio or {B} audio, or {A} audio and {B} audio, the two audios to be generated are attenuated and nearly quiet"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            10,
+            17,
+            47
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 2,
+        "explanation": "attenuation plus exclusive or in binary nested combination",
+        "id": "Attenuation_ExclusiveOr_Binary",
+        "name": "Attenuation_ExclusiveOr_Binary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or generate {B} audio, remember not to generate both of them, the two audios are amplitude damped and hard to hear",
+            "create {A} audio or {B} audio, but not both, the two audios are attenuated and nearly quiet",
+            "produce an audio clip containing either {A} audio or {B} audio, do not contain both of them, the two audios are attenuated and nearly quiet",
+            "either to generate {A} audio or generate {B} audio, be careful do not generate both of them, the two audios are attenuated and nearly quiet",
+            "create {A} audio or {B} audio, it is not correct to generate both, the two audios are attenuated and nearly muted"
+        ],
+        "event_rule_code": "AB",
+        "event_max_timelen_code": "55",
+        "child_label": [
+            10,
+            19,
+            48
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "ternary based nested combination relation",
+        "id": "Ternary_Arity",
+        "name": "Ternary_Arity",
+        "child_ids": [
+            "Temp_Comp_Ternary",
+            "Percep_Comp_Ternary",
+            "Comp_Comp_Ternary",
+            "Spat_Comp_Ternary",
+            "Spat_Comp_Percep_Ternary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": null,
+        "explanation": "Spatiality plus Compositionality plus Perceptuality based ternary nested combination relation",
+        "name": "Spat_Comp_Percep_Ternary",
+        "id": "Spat_Comp_Percep_Ternary",
+        "child_ids": [
+            "Proximity_Conjunction_Approaching_Ternary",
+            "Proximity_ExclusiveOr_Departuring_Ternary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 3,
+        "explanation": "Proximity plus Conjunction plus Approaching based ternary nested combination relation",
+        "name": "Proximity_Conjunction_Approaching_Ternary",
+        "id": "Proximity_Conjunction_Approaching_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio, sequentially followed by another {B} audio where the two audios are spatially of the same distance to the listener, after that generate a spatially approaching {C} audio",
+            "create {A} audio, followed by another {B} audio at the same spatial distance from the listener, and then generate a moving close {C} audio",
+            "generate a sequence where {A} audio is followed by another {B} audio, both at an equal distance from the listener, and conclude with spatially closer and closer {C} audio",
+            "produce {A} audio, then another {B} audio positioned at the same spatial distance, and finally generate {C} audio that is spatially approaching",
+            "synthesize {A} audio, immediately followed by another {B} audio with almost identical spatial proximity to the listener, then generate the {C} audio which is moving closer"
+        ],
+        "event_rule_code": "AAB",
+        "event_max_timelen_code": "333",
+        "child_label": [
+            13,
+            14,
+            16,
+            49
+        ],
+        "parent_label": [
+            1,
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 3,
+        "explanation": "Proximity plus ExclusiveOr plus Departuring based ternary nested combination relation",
+        "name": "Proximity_ExclusiveOr_Departuring_Ternary",
+        "id": "Proximity_ExclusiveOr_Departuring_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "either generate {A} audio, followed by {B} audio where the first {A} audio is spatially equal distant to the second {B} audio, or simply generate spatially moving away {C} audio",
+            "create either {A} audio followed by {B} audio, where initial {A} and the following {B} are of the same distance to the listener, or generate {C} audio on its own that is moving away",
+            "produce a sequence of two audios where both the first {A} audio and the second {B} audio are equally distant, or skip directly to generating a spatially fading in distance {C} audio alone",
+            "create either the {A} audio followed by another equal distant {B} audio, or simply generate {C} audio that recedes from the listener",
+            "generate an audio record with the initial {A} audio is spatially of the same distance with the followed another {B}, or alternatively just produce {C} audio that keeps moving further away from listener"
+        ],
+        "event_rule_code": "AAB",
+        "event_max_timelen_code": "555",
+        "child_label": [
+            13,
+            15,
+            19,
+            50
+        ],
+        "parent_label": [
+            1,
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "Spatiality plus Compositionality based ternary nested combination relation",
+        "name": "Spat_Comp_Ternary",
+        "id": "Spat_Comp_Ternary",
+        "child_ids": [
+            "Closeness_Conjunction_Ternary",
+            "Closeness_ExclusiveOr_Ternary",
+            "Proximity_Conjunction_Ternary",
+            "Proximity_ExclusiveOr_Ternary",
+            "Approaching_Departuring_Conjunction_Ternary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 3,
+        "explanation": "Closeness plus Conjunction based Ternary Nested Combination relation",
+        "name": "Closeness_Conjunction_Ternary",
+        "id": "Closeness_Conjunction_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio, followed by {B} audio where the first {A} audio is spatially closer than the second {B}, after that generate {C} audio",
+            "first generate {A} is audio that is spatially closer than the followed up another {B} audio, then generate {C} audio",
+            "initially generate the first {A} audio, then generate the second {B} audio that is spatially further than the first {A} audio, finally generate {C} audio",
+            "first generate two audios sequentially: the first {A} audio is closer than the second {B} audio, then generate {C} audio",
+            "initially create {A} audio followed by another {B} audio, where the first {A} audio is spatially closer to the second {B} audio, afterwards continue to generate {C} audio"
+        ],
+        "event_rule_code": "AAB",
+        "event_max_timelen_code": "333",
+        "child_label": [
+            11,
+            16,
+            51
+        ],
+        "parent_label": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 3,
+        "explanation": "Closeness plus ExclusiveOr based Ternary Nested Combination relation",
+        "name": "Closeness_ExclusiveOr_Ternary",
+        "id": "Closeness_ExclusiveOr_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "either generate {A} audio, followed by {B} audio where the first {A} audio is spatially closer than the second {B} audio, or simply generate {C} audio",
+            "create either {A} audio followed by {B} audio, where initial {A} is spatially closer than the following {B}, or generate {C} audio on its own",
+            "produce a sequence of two audios where first {A} audio is closer than the second {B} audio, or skip directly to generating {C} audio alone",
+            "create either a spatially closer {A} audio followed by another a more distant {B} audio, or simply generate {C} audio",
+            "generate an auditory effect with the initial {A} audio is spatially closer than the followed another {B}, or alternatively just produce {C} audio"
+        ],
+        "event_rule_code": "AAB",
+        "event_max_timelen_code": "555",
+        "child_label": [
+            11,
+            19,
+            52
+        ],
+        "parent_label": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 3,
+        "explanation": "Proximity plus Conjunction based Ternary Nested Combination relation",
+        "name": "Proximity_Conjunction_Ternary",
+        "id": "Proximity_Conjunction_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio, sequentially followed by another {B} audio where the two audio events are spatially of the same distance to the listener, after that generate {C} audio",
+            "create {A} audio, followed by another {B} audio at the same spatial distance from the listener, and then generate {C} audio",
+            "generate a sequence where {A} audio is followed by another {B} audio, both at an equal distance from the listener, and conclude with {C} audio",
+            "produce {A} audio, then another {B} audio positioned at the same spatial distance, and finally generate {C} audio",
+            "synthesize {A} audio, immediately followed by another {B} audio with identical spatial proximity to the listener, and then generate {C} audio"
+        ],
+        "event_rule_code": "AAB",
+        "event_max_timelen_code": "333",
+        "child_label": [
+            13,
+            16,
+            53
+        ],
+        "parent_label": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 3,
+        "explanation": "Approaching plus Departuring plus Conjunction based Ternary Nested Combination relation",
+        "name": "Approaching_Departuring_Conjunction_Ternary",
+        "id": "Approaching_Departuring_Conjunction_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate spatially moving closer {A} audio, followed by spatially moving away {B} audio, and then generate {C} audio",
+            "generate a sequence where {A} audio approaches the listener, {B} audio recedes from the listener, and then {C} audio is produced",
+            "produce {A} audio that spatially moves toward the listener, followed by {B} audio that moves farther away, and finally generate {C} audio",
+            "synthesize {A} audio as it draws nearer, then {B} audio as it moves farther, and then create {C} audio",
+            "generate an auditory sequence starting with {A} audio moving closer, followed by {B} audio moving away, and afterwards conclude with {C} audio"
+        ],
+        "event_rule_code": "AbC",
+        "event_max_timelen_code": "333",
+        "child_label": [
+            14,
+            15,
+            16,
+            54
+        ],
+        "parent_label": [
+            1,
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 3,
+        "explanation": "Proximity plus ExclusiveOr based Ternary Nested Combination relation",
+        "name": "Proximity_ExclusiveOr_Ternary",
+        "id": "Proximity_ExclusiveOr_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "either generate {A} audio, followed by {B} audio where the first {A} audio is spatially equal distant to the second {B} audio, or simply generate {C} audio",
+            "create either {A} audio followed by {B} audio, where initial {A} and the following {B} are of the same distance to the listener, or generate {C} audio on its own",
+            "produce a sequence of two audios where both the first {A} audio and the second {B} audio are equally distant, or skip directly to generating {C} audio alone",
+            "create either the {A} audio followed by another equal distant {B} audio, or simply generate {C} audio",
+            "generate an auditory effect with the initial {A} audio is spatially of the same distance with the followed another {B}, or alternatively just produce {C} audio"
+        ],
+        "event_rule_code": "AAB",
+        "event_max_timelen_code": "555",
+        "child_label": [
+            13,
+            19,
+            55
+        ],
+        "parent_label": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "Temporality plus Compositionality based ternary nested combination relation",
+        "name": "Temp_Comp_Ternary",
+        "id": "Temp_Comp_Ternary",
+        "child_ids": [
+            "Precedence_ExclusiveOr_Ternary",
+            "Precedence_Conjunction_Ternary",
+            "Precedence_Disjunction_Ternary",
+            "Succession_ExclusiveOr_Ternary",
+            "Succession_Conjunction_Ternary",
+            "Succession_Disjunction_Ternary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 3,
+        "explanation": "Precedence plus Conjunction based Ternary Nested Combination relation",
+        "name": "Precedence_Conjunction_Ternary",
+        "id": "Precedence_Conjunction_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio and {B} audio first, followed by generating {C} audio event",
+            "first producing {A} audio and {B} audio together, then followed by {C} audio afterwards",
+            "create {A} audio and {B} audio at the same time, then generate {C} audio",
+            "generate {A} audio and {B} audio simultaneously, then generate another {C} audio event",
+            "initially create {A} audio and {B} audio, they can either temporally overlapping or non-overlapping, then continue to generate {C} audio"
+        ],
+        "event_rule_code": "ABC",
+        "event_max_timelen_code": "333",
+        "child_label": [
+            0,
+            16,
+            56
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 3,
+        "explanation": "Succession plus ExclusiveOr based Ternary Nested Combination relation",
+        "name": "Succession_Conjunction_Ternary",
+        "id": "Succession_Conjunction_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {C} audio at the beginning, followed by generating {A} audio and {B} audio event",
+            "first producing {C} audio, then followed by {A} audio and {B} audio afterwards",
+            "create {A} audio and {B} audio after generating {C} first",
+            "producing {C} audio initially, afterwards continue to generate {A} and {B}",
+            "Once finished generating {C} audio, continue to create {A} audio and {B} audio that can be either temporally overlapping or non-overlapping"
+        ],
+        "event_rule_code": "ABC",
+        "event_max_timelen_code": "555",
+        "child_label": [
+            1,
+            16,
+            57
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 3,
+        "explanation": "Precedence plus Disjunction based Ternary Nested Combination relation",
+        "name": "Precedence_Disjunction_Ternary",
+        "id": "Precedence_Disjunction_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or {B} audio (or {A} audio and {B} audio both), then followed by generating {C} audio event",
+            "first producing {A} audio or {B} audio, or together with {B} audio, then followed by {C} audio afterwards",
+            "create either {A} audio or {B} audio, or {A} audio together with {B} audio, then generate {C} audio",
+            "generate {A} audio or {B} audio, or both {A} audio and {B} audio, then further generate another {C} audio event",
+            "initially create either {A} audio or {B} audio, or {A} audio and {B} audio, then continue to generate {C} audio"
+        ],
+        "event_rule_code": "ABC",
+        "event_max_timelen_code": "555",
+        "child_label": [
+            0,
+            17,
+            58
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 3,
+        "explanation": "Succession plus Disjunction based Ternary Nested Combination relation",
+        "name": "Succession_Disjunction_Ternary",
+        "id": "Succession_Disjunction_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {C} audio at the beginning, then followed by generating {A} audio or {B} audio (or {A} audio and {B} audio both)",
+            "first producing {C} audio, then followed by {A} audio or {B} audio, or together with {A} audio and {B} audio afterwards",
+            "create {A} audio or {B} audio, or {A} audio together with {B} audio, after generating {C} first",
+            "producing {C} audio initially, afterwards continue to generate {A} audio or {B} audio, or both {A} audio and {B} audio",
+            "Once finished generating {C} audio, continue to create either {A} audio or {B} audio, or {A} audio and {B} audio"
+        ],
+        "event_rule_code": "ABC",
+        "event_max_timelen_code": "555",
+        "child_label": [
+            1,
+            17,
+            59
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 3,
+        "explanation": "Precedence plus ExclusiveOr based Ternary Nested Combination relation",
+        "name": "Precedence_ExclusiveOr_Ternary",
+        "id": "Precedence_ExclusiveOr_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or generate {B} audio, remember not to generate both of them, then followed by generating {C} audio event",
+            "create {A} audio or {B} audio, but not both, then followed by {C} audio afterwards",
+            "produce an audio clip containing either {A} audio or {B} audio, do not contain both of them, then generate {C} audio",
+            "either to generate {A} audio or generate {B} audio, but remember do not generate both of them, then further generate {C} audio event",
+            "create {A} audio or {B} audio, it is not correct to generate both, then continue to generate {C} audio"
+        ],
+        "event_rule_code": "ABC",
+        "event_max_timelen_code": "555",
+        "child_label": [
+            0,
+            19,
+            60
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 3,
+        "explanation": "Succession plus ExclusiveOr based Ternary Nested Combination relation",
+        "name": "Succession_ExclusiveOr_Ternary",
+        "id": "Succession_ExclusiveOr_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {C} audio at the beginning, then followed by generating {A} audio or generate {B} audio, remember not to generate both of them",
+            "first producing {C} audio, then followed by {A} audio or {B} audio, but not both, afterwards",
+            "create {A} audio or {B} audio, but not both, after generating {C} first",
+            "producing {C} audio initially, afterwards continue to generate {A} audio or {B} audio, but not both",
+            "Once finished generating {C} audio, continue to create {A} audio or {B} audio, but do not generate both"
+        ],
+        "event_rule_code": "ABC",
+        "event_max_timelen_code": "555",
+        "child_label": [
+            1,
+            19,
+            61
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "Perception plus Compositionality based ternary nested combination relation",
+        "name": "Percep_Comp_Ternary",
+        "id": "Percep_Comp_Ternary",
+        "child_ids": [
+            "Blending_ExclusiveOr_Ternary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 3,
+        "explanation": "Blending plus Conjunction based Ternary Nested Combination relation",
+        "name": "Blending_ExclusiveOr_Ternary",
+        "id": "Blending_ExclusiveOr_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio and {B} audio that blend together and is hard to distinguish, or just to generate {C} audio separately",
+            "either generate mixed {A} audio and {B} audio, or just simply generate {C} audio",
+            "you can either create {C} audio, or create a mixed and indistinguishable {A} audio and {B} audio together",
+            "generate an audio tracking for {A} audio and {B} audio mixing together, or just generate {C} audio",
+            "two options, create a blended audio track containing both {A} audio and {B} audio that are mixed together, or just generate the a pure {C} audio"
+        ],
+        "event_rule_code": "AbC",
+        "event_max_timelen_code": "555",
+        "child_label": [
+            6,
+            19,
+            62
+        ],
+        "parent_label": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "Compositionality plus Compositionality based ternary nested combination relation",
+        "name": "Comp_Comp_Ternary",
+        "id": "Comp_Comp_Ternary",
+        "child_ids": [
+            "Conjunction_ExclusiveOr_Ternary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 3,
+        "explanation": "Conjunction plus ExclusiveOr based Ternary Nested Combination relation",
+        "name": "Conjunction_ExclusiveOr_Ternary",
+        "id": "Conjunction_ExclusiveOr_Ternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or {B} audio but not both first, then further generate {C} audio",
+            "create either {A} audio and {B} audio, then further to generate {C} audio",
+            "produce {A} audio or {B} audio, after that further to produce {C} audio",
+            "produce {C} audio initially, then continue to generate either {A} audio or {B} audio, but not both",
+            "generate {C} audio absolutely, and at the same time you need to generate either {A} audio or {B} audio"
+        ],
+        "event_rule_code": "ABC",
+        "event_max_timelen_code": "555",
+        "child_label": [
+            16,
+            19,
+            63
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "quaternary based nested combination relation",
+        "id": "Quaternary_Arity",
+        "name": "Quaternary_Arity",
+        "child_ids": [
+            "Temp_Comp_Quaternary",
+            "Comp_Comp_Quaternary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": null,
+        "explanation": "Temporality plus Compositionality based quaternary nested combination relation",
+        "name": "Temp_Comp_Quaternary",
+        "id": "Temp_Comp_Quaternary",
+        "child_ids": [
+            "Precedence_ExclusiveOr_Quaternary",
+            "Precedence_Implication_If_Quaternary",
+            "Precedence_Implication_Then_Quaternary",
+            "Precedence_Implication_Else_Quaternary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 4,
+        "explanation": "Precedence plus ExclusiveOr based Quaternary Nested Combination relation",
+        "name": "Precedence_ExclusiveOr_Quaternary",
+        "id": "Precedence_ExclusiveOr_Quaternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or {B} audio but not both first, then further generate {C} audio or {D} audio",
+            "create either {A} audio or {B} audio initially, then further follow the same strategy to generate {C} audio or {D} audio",
+            "produce {A} audio or {B} audio at the beginning, after that further to produce {C} audio or {D} audio",
+            "produce {C} audio or {D} audio initially, then continue to generate either {A} audio or {B} audio, but not both",
+            "generate {C} audio or {D} audio first, at the same time you need to generate either {A} audio or {B} audio"
+        ],
+        "event_rule_code": "ABCD",
+        "event_max_timelen_code": "5555",
+        "child_label": [
+            0,
+            19,
+            64
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 4,
+        "explanation": "Precedence plus Implication If based Quaternary Nested Combination relation",
+        "name": "Precedence_Implication_If_Quaternary",
+        "id": "Precedence_Implication_If_Quaternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio followed by {B} audio, then further generate {C} audio, else just generate {D} audio",
+            "when {A} audio is followed by {B} audio, proceed to generate {C} audio. If not, only generate {D} audio",
+            "If the generated {A} audio is followed by {B} audio, continue to create {C} audio. Otherwise, produce {D} audio",
+            "generate {C} audio if {A} audio is succeeded by {B} audio; otherwise simply generate {D} audio",
+            "in cases where {A} audio is generated and then {B} audio follows, generate {C} audio. Otherwise, generate {D} audio instead"
+        ],
+        "event_rule_code": "ABCD",
+        "event_max_timelen_code": "3335",
+        "child_label": [
+            0,
+            20,
+            65
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 4,
+        "explanation": "Precedence plus Implication Then based Quaternary Nested Combination relation",
+        "name": "Precedence_Implication_Then_Quaternary",
+        "id": "Precedence_Implication_Then_Quaternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio is generated, continue to generate {B} audio followed by {C} audio, else just generate {D} audio",
+            "if {A} audio is generated, proceed to create {B} audio and then {C} audio. Otherwise, only generate {D} audio.",
+            "when {A} audio is created, follow it with {B} audio first and {C} audio second. If not, generate {D} audio instead",
+            "generate {B} audio and then {C} audio if {A} audio has been generated; otherwise, generate {D} audio",
+            "if {A} audio is successfully generated, continue by producing {B} audio followed by {C} audio. Otherwise, create {D} audio alones"
+        ],
+        "event_rule_code": "ABCD",
+        "event_max_timelen_code": "3335",
+        "child_label": [
+            0,
+            20,
+            66
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 4,
+        "explanation": "Precedence plus Implication Else based Quaternary Nested Combination relation",
+        "name": "Precedence_Implication_Else_Quaternary",
+        "id": "Precedence_Implication_Else_Quaternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio is generated, continue to generate {B} audio, else just generate {C} audio followed by {D} audio",
+            "if {A} audio is generated, proceed to create {B} audio. If not, generate {C} audio followed by {D} audio",
+            "when {A} audio is created, generate {B} audio. If not, generate {C} audio and temporally then {D} audio",
+            "generate {B} audio if {A} audio has been generated; otherwise, generate {C} audio and then {D} audio",
+            "if {A} audio is successfully generated, continue by producing {B} audio. Otherwise, create {C} audio first and then {D} audio"
+        ],
+        "event_rule_code": "ABCD",
+        "event_max_timelen_code": "5555",
+        "child_label": [
+            0,
+            20,
+            67
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "Compositionality plus Compositionality based quaternary nested combination relation",
+        "name": "Comp_Comp_Quaternary",
+        "id": "Comp_Comp_Quaternary",
+        "child_ids": [
+            "Conjunction_ExclusiveOr_Quaternary",
+            "Conjunction_Implication_If_Quaternary",
+            "Conjunction_Implication_Then_Quaternary",
+            "Conjunction_Implication_Else_Quaternary",
+            "ExclusiveOr_Implication_If_Quaternary",
+            "ExclusiveOr_Implication_Then_Quaternary",
+            "ExclusiveOr_Implication_Else_Quaternary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 4,
+        "explanation": "Conjunction plus ExclusiveOr based Quaternary Nested Combination relation",
+        "name": "Conjunction_ExclusiveOr_Quaternary",
+        "id": "Conjunction_ExclusiveOr_Quaternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "generate {A} audio or {B} audio but not both first, then further generate {C} audio or {D} audio and also not both",
+            "begin by producing either {A} audio or {B} audio, ensuring only one is generated. Next, proceed to generate either {C} audio or {D} audio, again only one",
+            "start by creating {A} audio or {B} audio, choosing just one. After that, generate {C} audio or {D} audio, ensuring not to generate both",
+            "generate one of {A} audio or {B} audio first. Then, proceed to create one of {C} audio or {D} audio, excluding both",
+            "generate {C} audio or {D} audio first, at the same time you need to generate either {A} audio or {B} audio"
+        ],
+        "event_rule_code": "ABCD",
+        "event_max_timelen_code": "5555",
+        "child_label": [
+            16,
+            19,
+            68
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 4,
+        "explanation": "Conjunction plus Implication If based Quaternary Nested Combination relation",
+        "name": "Conjunction_Implication_If_Quaternary",
+        "id": "Conjunction_Implication_If_Quaternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio and {B} audio, then further to generate {C} audio, otherwise to generate {D} audio",
+            "generate {C} audio if {A} audio and {B} audio are produced. If not, create {D} audio instead",
+            "If the generated {A} audio is followed by {B} audio, continue to create {C} audio. Otherwise, produce {D} audio",
+            "produce {C} audio only if both {A} audio and {B} audio are generated. Otherwise, create {D} audio",
+            "if {A} audio is generated along with {B} audio, continue with {C} audio. If this condition is not met, generate {D} audio"
+        ],
+        "event_rule_code": "ABCD",
+        "event_max_timelen_code": "5555",
+        "child_label": [
+            16,
+            20,
+            69
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 4,
+        "explanation": "Conjunction plus Implication Then based Quaternary Nested Combination relation",
+        "name": "Conjunction_Implication_Then_Quaternary",
+        "id": "Conjunction_Implication_Then_Quaternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio generated, then further generate {B} audio and {C} audio, else just generate {D} audio",
+            "upon generating {A} audio, continue to create both {B} audio and {C} audio. If {A} audio is not generated, just produce {D} audio",
+            "if {A} audio has been created, generate {B} audio followed by {C} audio. Otherwise, proceed with generating {D} audio alone",
+            "if {A} audio is generated, proceed to create both {B} audio and {C} audio. Otherwise, only generate {D} audio",
+            "generate {B} audio and {C} audio if {A} audio is created. If not, produce {D} audio instead"
+        ],
+        "event_rule_code": "ABCD",
+        "event_max_timelen_code": "5555",
+        "child_label": [
+            16,
+            20,
+            70
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 4,
+        "explanation": "Conjunction plus Implication Else based Quaternary Nested Combination relation",
+        "name": "Conjunction_Implication_Else_Quaternary",
+        "id": "Conjunction_Implication_Else_Quaternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio generated, then further generate {B} audio, else just generate {C} audio and {D} audio",
+            "if {A} audio is generated, proceed to create {B} audio. Otherwise, generate both {C} audio and {D} audio",
+            "when {A} audio is successfully created, follow up by generating {B} audio. Otherwise, produce both {C} audio and {D} audio",
+            "if {A} audio has been generated, continue with {B} audio. If {A} audio is not generated, then generate {C} audio along with {D} audio",
+            "produce {B} audio only if {A} audio is generated. Otherwise, generate both {C} audio and {D} audio together"
+        ],
+        "event_rule_code": "ABCD",
+        "event_max_timelen_code": "5555",
+        "child_label": [
+            16,
+            20,
+            71
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 4,
+        "explanation": "ExclusiveOr plus Implication If based Quaternary Nested Combination relation",
+        "name": "ExclusiveOr_Implication_If_Quaternary",
+        "id": "ExclusiveOr_Implication_If_Quaternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio or {B} audio but not both, then further to generate {C} audio, otherwise to generate {D} audio",
+            "generate {C} audio if {A} audio or {B} audio, but not both, is produced. If neither or both are generated, create {D} audio instead",
+            "when exactly one of {A} audio or {B} audio is created, follow up by generating {C} audio. Otherwise, proceed to generate {D} audio",
+            "produce {C} audio only if either {A} audio or {B} audio is generated. Otherwise, create {D} audio",
+            "produce {C} audio if {A} audio or {B} audio is generated exclusively. If neither or both are generated, proceed to create {D} audio"
+        ],
+        "event_rule_code": "ABCD",
+        "event_max_timelen_code": "5555",
+        "child_label": [
+            19,
+            20,
+            72
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 4,
+        "explanation": "ExclusiveOr plus Implication Then based Quaternary Nested Combination relation",
+        "name": "ExclusiveOr_Implication_Then_Quaternary",
+        "id": "ExclusiveOr_Implication_Then_Quaternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if {A} audio is generated, then further generate {B} audio or {C} audio, else just generate {D} audio",
+            "generate either {B} audio or {C} audio if {A} audio is produced. If {A} audio is not generated, create {D} audio insteadd",
+            "when {A} audio is successfully created, follow up by generating {B} audio or {C} audio, but not both. Otherwise, produce {D} audio",
+            "if {A} audio is created, continue with the generation of {B} audio or {C} audio. If not, proceed to generate {D} audio",
+            "produce {B} audio or {C} audio if {A} audio has been generated. Otherwise, create {D} audio"
+        ],
+        "event_rule_code": "ABCD",
+        "event_max_timelen_code": "5555",
+        "child_label": [
+            19,
+            20,
+            73
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 4,
+        "explanation": "ExclusiveOr plus Implication Else based Quaternary Nested Combination relation",
+        "name": "ExclusiveOr_Implication_Else_Quaternary",
+        "id": "ExclusiveOr_Implication_Else_Quaternary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if either {A} audio is generated, then further generate {B} audio, else just generate {C} audio or {D} audio",
+            "generate {B} audio if {A} audio is produced. If {A} audio is not generated, create {C} audio or {D} audio instead but not both",
+            "when {A} audio is successfully created, follow up by generating {B} audio. If {A} audio is not generated, proceed to generate {C} audio or {D} audio, but not both",
+            "if {A} audio is created, continue with generating {B} audio. If {A} is not generated, proceed to create either {C} audio or {D} audio but not both",
+            "produce {B} audio if {A} audio has been generated. Otherwise, create either {C} audio or {D} audio, but not both"
+        ],
+        "event_rule_code": "ABCD",
+        "event_max_timelen_code": "5555",
+        "child_label": [
+            19,
+            20,
+            74
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "quinary based nested combination relation",
+        "id": "Quinary_Arity",
+        "name": "Quinary_Arity",
+        "child_ids": [
+            "Count_Comp_Quinary",
+            "Temporality_Comp_Quinary",
+            "Spatiality_Comp_Quinary",
+            "Comp_Comp_Quinary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": null,
+        "explanation": "Count plus Compositionality based quinary nested combination relation",
+        "name": "Count_Comp_Quinary",
+        "id": "Count_Comp_Quinary",
+        "child_ids": [
+            "Count_Implication_If_Quinary",
+            "Count_Implication_Then_Quinary",
+            "Count_Implication_Else_Quinary",
+            "Count_ExclusiveOr_Quinary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 5,
+        "explanation": "Count plus Implication If based Quinary Nested Combination relation",
+        "name": "Count_Implication_If_Quinary",
+        "id": "Count_Implication_If_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated 3 audios: {A} audio, {B} audio and {C} audio, then further generate {D} audio, else just generate {E} audio",
+            "if {A} audio, {B} audio, and {C} audio are all generated, proceed to create {D} audio. Otherwise, generate {E} audio",
+            "generate {D} audio if {A} audio, {B} audio, and {C} audio are produced. If not, create {E} audio instead",
+            "when all three audios: {A}, {B}, and {C} are successfully created, follow up by generating {D} audio. Otherwise, produce {E} audio",
+            "produce {D} audio only if {A} audio, {B} audio, and {C} audio are all generated. Otherwise, create {E} audio"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            20,
+            75
+        ],
+        "parent_label": [
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Count plus Implication Then based Quinary Nested Combination relation",
+        "name": "Count_Implication_Then_Quinary",
+        "id": "Count_Implication_Then_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio generated, then further generate 3 audios: {B} audio, {C} audio and {D} audio, else just generate {E} audio",
+            "generate {B} audio, {C} audio, and {D} audio if {A} audio is produced. If not, create {E} audio instead",
+            "if {A} audio has been generated, continue by creating three audios: {B}, {C}, and {D} audio. If {A} audio is not generated, proceed to generate {E} audio",
+            "if {A} audio, {B} audio, and {C} audio are generated, continue with the generation of {D} audio. If not, proceed to generate {E} audio",
+            "produce {B} audio, {C} audio, and {D} audio only if {A} audio is generated. Otherwise, create {E} audio"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            20,
+            76
+        ],
+        "parent_label": [
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Count plus Implication Else based Quinary Nested Combination relation",
+        "name": "Count_Implication_Else_Quinary",
+        "id": "Count_Implication_Else_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio generated, then further generate {B} audio, else just generate 3 audios: {C} audio, {D} audio and {E} audio",
+            "if {A} audio is generated, proceed to create {B} audio. If not, generate {C} audio, {D} audio, and {E} audio instead",
+            "when {A} audio is successfully created, follow up by generating {B} audio. If {A} audio is not generated, proceed to generate {C} audio, {D} audio, and {E} audio",
+            "if {A} audio has been generated, continue with {B} audio. If {A} audio is not generated, proceed to create {C} audio, {D} audio, and {E} audio",
+            "produce {B} audio if {A} audio is generated. Otherwise, create {C} audio, {D} audio, and {E} audio"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            20,
+            77
+        ],
+        "parent_label": [
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Count plus Disjunction based Quinary Nested Combination relation",
+        "name": "Count_ExclusiveOr_Quinary",
+        "id": "Count_ExclusiveOr_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "either generate 3 audios: {A} audio, {B} audio and {C} audio, or generate another 2 audios: {D} audio and {E} audio",
+            "produce one of the following sets: {A} audio, {B} audio, and {C} audio, or {D} audio and {E} audio",
+            "generate either three audios: {A} audio, {B} audio, and {C} audio, or two audios: {D} audio and {E} audio",
+            "when all three audios: {A}, {B}, and {C} are successfully created, follow up by generating {D} audio or {E} audio",
+            "select between generating three audios ({A}, {B}, {C}) or generating two audios ({D}, {E})"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            19,
+            78
+        ],
+        "parent_label": [
+            4,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "Temporality plus Compositionality based quinary nested combination relation",
+        "name": "Temporality_Comp_Quinary",
+        "id": "Temporality_Comp_Quinary",
+        "child_ids": [
+            "Precedence_Implication_IfThen_Quinary",
+            "Precedence_Implication_IfElse_Quinary",
+            "Precedence_Implication_ThenElse_Quinary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 5,
+        "explanation": "Precedence plus Implication IfThen based Quinary Nested Combination relation",
+        "name": "Precedence_Implication_IfThen_Quinary",
+        "id": "Precedence_Implication_IfThen_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio followed by {B} audio, then further generate {C} audio followed by {D} audio, else just generate {E} audio",
+            "generate {C} audio and then {D} audio if {A} audio is produced and followed by {B} audio. Otherwise, just create {E} audio",
+            "when {A} audio is followed by {B} audio, continue by generating {C} audio and then {D} audio. If this condition is not met, only produce {E} audio",
+            "if {A} audio is created and followed by {B} audio, follow up with {C} audio first and then {D} audio. Otherwise, only generate {E} audio",
+            "produce {C} audio followed by {D} audio only if {A} audio and {B} audio are generated in sequence. Otherwise, only create {E} audio"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            0,
+            20,
+            79
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Precedence plus Implication IfElse based Quinary Nested Combination relation",
+        "name": "Precedence_Implication_IfElse_Quinary",
+        "id": "Precedence_Implication_IfElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio followed by {B} audio, then further generate {C} audio, else just generate {D} audio followed by {E} audio",
+            "generate {C} audio if {A} audio is produced and followed by {B} audio. If this condition is not met, generate {D} audio followed by {E} audio",
+            "when {A} audio is followed by {B} audio, continue by generating just {C} audio. If not, proceed to generate {D} audio followed by {E} audio sequentially",
+            "if {A} audio is created and followed by {B} audio, follow up with the {C} audio. If this condition is not satisfied, generate {D} audio followed by {E} audio",
+            "produce {C} audio only if {A} audio and {B} audio are generated in sequence. Otherwise, simply generate {D} audio followed by {E} audio"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            0,
+            20,
+            80
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Precedence plus Implication ThenElse based Quinary Nested Combination relation",
+        "name": "Precedence_Implication_ThenElse_Quinary",
+        "id": "Precedence_Implication_ThenElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio is generated, then further generate {B} audio followed by {C} audio, else just generate {D} audio followed by {E} audio",
+            "if {A} audio is generated, proceed to create {B} audio followed by {C} audio. If {A} audio is not generated, generate {D} audio followed by {E} audio",
+            "when {A} audio is created, follow up by generating {B} audio followed by {C} audio. If {A} audio is not generated, proceed to generate {D} audio followed by {E} audio",
+            "if {A} audio is generated, continue with {B} audio followed by {C} audio. If {A} audio is not generated, proceed to generate {D} audio followed by {E} audio",
+            "generate {B} audio followed by {C} audio only if {A} audio is generated. Otherwise, generate {D} audio followed by {E} audio"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "33355",
+        "child_label": [
+            0,
+            20,
+            81
+        ],
+        "parent_label": [
+            0,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "Spatiality plus Compositionality based quinary nested combination relation",
+        "name": "Spatiality_Comp_Quinary",
+        "id": "Spatiality_Comp_Quinary",
+        "child_ids": [
+            "Closeness_Implication_IfThen_Quinary",
+            "Closeness_Implication_IfElse_Quinary",
+            "Closeness_Implication_ThenElse_Quinary",
+            "Proximity_Implication_IfThen_Quinary",
+            "Proximity_Implication_IfElse_Quinary",
+            "Proximity_Implication_ThenElse_Quinary",
+            "Closeness_Proximity_Implication_IfThen_Quinary",
+            "Closeness_Proximity_Implication_IfElse_Quinary",
+            "Closeness_Proximity_Implication_ThenElse_Quinary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 5,
+        "explanation": "Closeness plus Implication IfThen based Quinary Nested Combination relation",
+        "name": "Closeness_Implication_IfThen_Quinary",
+        "id": "Closeness_Implication_IfThen_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio followed {B} audio and {A} is spatially closer to {B}, then further generate {C} audio followed by {D} audio where {C} is spatially closer than {D}, else just generate {E} audio",
+            "if {A} audio is generated followed by {B} audio, with {A} being spatially closer than {B}, then generate {C} audio followed by {D} audio, ensuring {C} is spatially closer than {D}. Otherwise, just generate {E} audio",
+            "generate {C} audio followed by {D} audio, with {C} spatially closer than {D}, if {A} audio is produced followed by {B} audio and {A} is spatially closer to {B}. If not, only create {E} audio",
+            "when {A} audio precedes {B} audio and {A} is spatially nearer than {B}, proceed to produce {C} audio followed by {D} audio, where {C} is spatially nearer than {D}. Otherwise, just generate {E} audio",
+            "produce {C} audio and then {D} audio, with {C} being spatially closer than {D}, if {A} audio is generated followed by {B} audio and {A} is spatially nearer than {B}. Otherwise, just generate {E} audio"
+        ],
+        "event_rule_code": "AABBC",
+        "event_max_timelen_code": "22335",
+        "child_label": [
+            11,
+            20,
+            82
+        ],
+        "parent_label": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Closeness plus Implication IfElse based Quinary Nested Combination relation",
+        "name": "Closeness_Implication_IfElse_Quinary",
+        "id": "Closeness_Implication_IfElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio followed {B} audio and {A} is spatially closer to {B}, then further generate {C} audio, else just generate {D} audio followed by {E} audio where {D} audio is spatially closer than {E} audio",
+            "generate {C} audio if {A} audio is produced followed by {B} audio and {A} is spatially closer to {B}. If this condition is not met, generate {D} audio followed by {E} audio where {A} audio is closer than {E} audio",
+            "when {A} audio precedes {B} audio and {A} is spatially nearer than {B}, continue by generating {C}. If this condition is not met, generate {D} audio followed by {E} audio and {D} audio is nearer than {E} audio",
+            "if {A} audio is generated followed by {B} audio and {A} is spatially closer than {B}, proceed to generate {C} audio. If not, generate {D} audio followed by {E} audio and {D} audio is spatially closer than {E} audio",
+            "produce {C} audio only if {A} audio is generated followed by {B} audio and {A} is spatially nearer than {B}. If this condition is not met, generate {D} audio followed by {E} audio and {D} is spatially closer than {E} audio"
+        ],
+        "event_rule_code": "AABCC",
+        "event_max_timelen_code": "33355",
+        "child_label": [
+            11,
+            20,
+            83
+        ],
+        "parent_label": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Closeness plus Implication ThenElse based Quinary Nested Combination relation",
+        "name": "Closeness_Implication_ThenElse_Quinary",
+        "id": "Closeness_Implication_ThenElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio is generated, then generate {B} audio followed by {C} audio where {B} is spatially closer than {C}, else just generate {D} audio followed by {E} audio sequantially and {D} is spatially closer than {E}",
+            "generate {B} audio first and then {C} audio, where {B} is spatially nearer than {C}, if {A} audio is produced. If not, create {D} audio followed by {E} audio in order, making sure {D} is spatially closer than {E}",
+            "when {A} audio is created, follow it with {B} audio and then {C} audio, ensuring that {B} is spatially closer than {C}. Otherwise, generate {D} audio followed by {E} audio, ensuring {D} is spatially nearer than {E} audio",
+            "if {A} audio is successfully produced, continue by generating {B} audio followed by {C} audio, ensuring {B} is spatially closer than {C}. If {A} is not generated, produce {D} audio and then {E} audio, with {D} being spatially nearer than {E}",
+            "produce {B} audio and then {C} audio, ensuring {B} is spatially closer than {C}, if {A} audio is generated. Otherwise, generate {D} audio followed by {E} audio in sequence, making sure {D} is spatially closer than {E}"
+        ],
+        "event_rule_code": "ABBCC",
+        "event_max_timelen_code": "33355",
+        "child_label": [
+            11,
+            20,
+            84
+        ],
+        "parent_label": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Proximity plus Implication IfThen based Quinary Nested Combination relation",
+        "name": "Proximity_Implication_IfThen_Quinary",
+        "id": "Proximity_Implication_IfThen_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio followed by {B} audio and {A} is spatially the same distant to {B} audio, then further generate {C} audio followed by {D} audio where {C} is spatially equidistant to {D}, else just generate {E} audio",
+            "generate {C} audio and then {D} audio if {A} audio is produced followed by {B} audio and {A} is spatially equidistant to {B}. Otherwise, just create {E} audio",
+            "when {A} audio precedes {B} audio and {A} is spatially equidistant to {B}, proceed to produce {C} audio followed by {D} audio, where {C} is spatially equidistant to {D}. If this condition is not met, only generate {E} audio",
+            "if {A} audio and {B} audio are generated in sequence and are spatially equidistant, continue with {C} audio followed by {D} audio, which should also be spatially equidistant. Otherwise, only produce {E} audio",
+            "produce {C} audio and then {D} audio, ensuring they are spatially equidistant, if {A} and {B} audios are created sequentially and are spatially equidistant. Otherwise, generate {E} audio instead"
+        ],
+        "event_rule_code": "AABBC",
+        "event_max_timelen_code": "33225",
+        "child_label": [
+            13,
+            20,
+            85
+        ],
+        "parent_label": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Proximity plus Implication IfElse based Quinary Nested Combination relation",
+        "name": "Proximity_Implication_IfElse_Quinary",
+        "id": "Proximity_Implication_IfElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio followed by {B} audio and {A} is spatially the same distant to {B} audio, then further generate {C} audio, else just generate {D} audio followed by {E} audio where {D} and {E} are spatially equidistant",
+            "generate {C} audio if {A} audio is followed by {B} audio and they are spatially equidistant. If not, create {D} audio and then {E} audio, ensuring that {D} and {E} are equally spaced",
+            "when {A} audio is followed by {B} audio and they are spatially the same distance from each other, proceed to generate {C} audio. Otherwise, generate {D} audio and {E} audio in sequence, maintaining spatial equidistance between them",
+            "if {A} audio precedes {B} audio and the two are spatially equidistant, continue by producing {C} audio. If this condition is not met, create {D} audio followed by {E} audio, ensuring they are spatially equidistant",
+            "produce {C} audio only if {A} and {B} audios are generated sequentially and are spatially the same distance apart. Otherwise, generate {D} audio and then {E} audio, ensuring their spatial equidistance"
+        ],
+        "event_rule_code": "AABCC",
+        "event_max_timelen_code": "33355",
+        "child_label": [
+            13,
+            20,
+            86
+        ],
+        "parent_label": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Proximity plus Implication ThenElse based Quinary Nested Combination relation",
+        "name": "Proximity_Implication_ThenElse_Quinary",
+        "id": "Proximity_Implication_ThenElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio is generated, then generate {B} audio followed by {C} audio where {B} and {C} are spatially equidistant, else just generate {D} audio followed by {E} audio where {D} and {E} are spatially equidistant",
+            "generate {B} audio and then {C} audio, ensuring they are spatially equidistant, if {A} audio is produced. If not, generate {D} audio followed by {E} audio, ensuring they are equally spaced",
+            "when {A} audio is created, continue with generating {B} audio and then {C} audio, ensuring that {B} and {C} are spatially equidistant. If {A} audio is not generated, proceed to generate {D} audio followed by {E} audio, ensuring they are spatially equidistant",
+            "if {A} audio is successfully produced, continue by generating {B} audio followed by {C} audio, ensuring they are spatially equidistant. If {A} is not generated, produce {D} audio and then {E} audio, ensuring they are spatially equidistant",
+            "produce {B} audio and then {C} audio, ensuring they are spatially equidistant, if {A} audio is generated. Otherwise, generate {D} audio followed by {E} audio, ensuring they are spatially equidistant"
+        ],
+        "event_rule_code": "ABBCC",
+        "event_max_timelen_code": "33355",
+        "child_label": [
+            13,
+            20,
+            87
+        ],
+        "parent_label": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Closeness plus Proximity plus Implication IfThen based Quinary Nested Combination relation",
+        "name": "Closeness_Proximity_Implication_IfThen_Quinary",
+        "id": "Closeness_Proximity_Implication_IfThen_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio followed {B} audio and {A} is spatially closer to {B}, then further generate {C} audio followed by {D} audio where {C} is spatially equidistant to {D}, else just generate {E} audio",
+            "generate {C} audio and then {D} audio, ensuring they are spatially equidistant, if {A} audio is followed by {B} audio and {A} is spatially nearer to {B}. Otherwise, produce only {E} audio",
+            "when {A} audio precedes {B} audio and {A} is spatially closer to {B}, continue by generating {C} audio and then {D} audio, maintaining spatial equidistance. If not, just create {E} audio",
+            "if {A} audio is followed by {B} audio and {A} is spatially nearer than {B}, proceed to create {C} audio followed by {D} audio, ensuring that {C} and {D} are equally spaced. Otherwise, generate {E} audio",
+            "produce {C} audio and then {D} audio, ensuring spatial the same distant, if {A} and {B} audios are generated sequentially with {A} spatially closer to {B}. Otherwise, generate {E} audio instead"
+        ],
+        "event_rule_code": "AABBC",
+        "event_max_timelen_code": "33225",
+        "child_label": [
+            11,
+            13,
+            20,
+            85,
+            88
+        ],
+        "parent_label": [
+            1,
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Closeness plus Proximity plus Implication IfElse based Quinary Nested Combination relation",
+        "name": "Closeness_Proximity_Implication_IfElse_Quinary",
+        "id": "Closeness_Proximity_Implication_IfElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio followed {B} audio and {A} is spatially closer to {B}, then further generate {C} audio, else just generate {D} audio followed by {E} audio where {D} and {E} are spatially equidistant",
+            "generate {C} audio if {A} audio is followed by {B} audio and {A} is spatially nearer to {B}. If not, generate {D} audio followed by {E} audio, ensuring that {D} and {E} are spatially equidistant",
+            "when {A} audio precedes {B} audio and {A} is spatially closer to {B}, continue by generating {C} audio. If not, generate {D} audio followed by {E} audio, ensuring that {D} and {E} are spatially equidistant",
+            "if {A} audio is generated followed by {B} audio and {A} is spatially nearer than {B}, proceed to create {C} audio. If not, generate {D} audio first and then {E} audio, ensuring that {D} and {E} are spatially equidistant",
+            "produce {C} audio only if {A} audio is followed by {B} audio and {A} is spatially closer to {B}. If not, generate {D} audio followed by {E} audio, ensuring that {D} and {E} are spatially of the same distance apart"
+        ],
+        "event_rule_code": "AABCC",
+        "event_max_timelen_code": "33455",
+        "child_label": [
+            11,
+            13,
+            20,
+            86,
+            89
+        ],
+        "parent_label": [
+            1,
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Closeness plus Proximity plus Implication ThenElse based Quinary Nested Combination relation",
+        "name": "Closeness_Proximity_Implication_ThenElse_Quinary",
+        "id": "Closeness_Proximity_Implication_ThenElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio is generated, then generate {B} audio followed by {C} audio where {B} is spatially closer than {C}, else just generate {D} audio followed by {E} audio where {D} and {E} are spatially equidistant",
+            "generate {B} audio followed by {C} audio, where {B} is spatially closer than {C}, if {A} audio is produced. If not, generate {D} audio followed by {E} audio, ensuring that {D} and {E} are spatially equidistant",
+            "when {A} audio is created, continue by generating {B} audio followed by {C} audio, ensuring that {B} is spatially closer than {C}. If {A} audio is not generated, proceed to generate {D} audio followed by {E} audio, ensuring that {D} and {E} are spatially equidistant",
+            "if {A} audio is generated, continue with {B} audio followed by {C} audio, ensuring that {B} is spatially closer than {C}. If {A} audio is not generated, proceed to generate {D} audio followed by {E} audio, ensuring that {D} and {E} are spatially equidistant",
+            "produce {B} audio and then {C} audio, ensuring that {B} is spatially closer than {C}, if {A} audio is generated. If not, generate {D} audio followed by {E} audio, ensuring that {D} and {E} are spatially the same distant"
+        ],
+        "event_rule_code": "ABBCC",
+        "event_max_timelen_code": "43355",
+        "child_label": [
+            11,
+            13,
+            20,
+            87,
+            90
+        ],
+        "parent_label": [
+            1,
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": null,
+        "explanation": "Compositionality plus Compositionality based quinary nested combination relation",
+        "name": "Comp_Comp_Quinary",
+        "id": "Comp_Comp_Quinary",
+        "child_ids": [
+            "Conjunction_Implication_IfThen_Quinary",
+            "Conjunction_Implication_IfElse_Quinary",
+            "Conjunction_Implication_ThenElse_Quinary",
+            "ExclusiveOr_Implication_IfThen_Quinary",
+            "ExclusiveOr_Implication_IfElse_Quinary",
+            "ExclusiveOr_Implication_ThenElse_Quinary",
+            "Conjunction_ExclusiveOr_Implication_IfThen_Quinary",
+            "Conjunction_ExclusiveOr_Implication_IfElse_Quinary",
+            "Conjunction_ExclusiveOr_Implication_ThenElse_Quinary"
+        ],
+        "text_prompt_template": [],
+        "child_label": null,
+        "parent_label": null
+    },
+    {
+        "arity": 5,
+        "explanation": "Conjunction plus Implication IfThen based Quinary Nested Combination relation",
+        "name": "Conjunction_Implication_IfThen_Quinary",
+        "id": "Conjunction_Implication_IfThen_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio and {B} audio, then further generate {C} audio and {D} audio, else just generate {E} audio",
+            "generate {C} audio and {D} audio if {A} audio and {B} audio are produced. If not, simply create {E} audio",
+            "when {A} audio and {B} audio are successfully created, follow up by generating {C} audio and {D} audio. If not, only produce {E} audio",
+            "if {A} audio and {B} audio are generated, continue with the generation of {C} audio and {D} audio. If not, only generate {E} audio",
+            "produce {C} audio and {D} audio only if {A} audio and {B} audio are generated. Otherwise, only create {E} audio"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            16,
+            20,
+            91
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Conjunction plus Implication IfElse based Quinary Nested Combination relation",
+        "name": "Conjunction_Implication_IfElse_Quinary",
+        "id": "Conjunction_Implication_IfElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio and {B} audio, then further generate {C} audio, else just generate {D} audio and {E} audio",
+            "generate {C} audio if {A} audio and {B} audio are produced. If not, generate {D} audio and {E} audio instead",
+            "when {A} audio and {B} audio are successfully created, continue by generating {C} audio. If not, proceed to generate {D} audio and {E} audio",
+            "if {A} audio and {B} audio are generated, continue with the generation of {C} audio. If not, only generate {D} audio and {E} audio",
+            "produce {C} audio only if {A} audio and {B} audio are generated. Otherwise, generate {D} audio and {E} audio"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            16,
+            20,
+            92
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Conjunction plus Implication ThenElse based Quinary Nested Combination relation",
+        "name": "Conjunction_Implication_ThenElse_Quinary",
+        "id": "Conjunction_Implication_ThenElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio is generated, then continue by generating {B} audio and {C} audio, else just generate {D} audio and {E} audio",
+            "generate {B} audio and {C} audio if {A} audio is produced. If not, generate {D} audio and {E} audio instead",
+            "when {A} audio is created, continue by generating {B} audio and {C} audio. If {A} audio is not generated, proceed to generate {D} audio and {E} audio",
+            "if {A} audio is generated, continue with {B} audio and {C} audio. If {A} audio is not generated, proceed to generate {D} audio and {E} audio",
+            "produce {B} audio and {C} audio if {A} audio is generated. Otherwise, generate {D} audio and {E} audio"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            16,
+            20,
+            93
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "ExclusiveOr plus Implication IfThen based Quinary Nested Combination relation",
+        "name": "ExclusiveOr_Implication_IfThen_Quinary",
+        "id": "ExclusiveOr_Implication_IfThen_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio or {B} audio but not both, then further generate {C} audio or {D} audio, also not both, else just generate {E} audio",
+            "generate {C} audio or {D} audio, but not both, if {A} audio or {B} audio is produced, and only one of them is generated. Otherwise, just create {E} audio",
+            "if exactly one of {A} audio or {B} audio is created, continue by generating one of {C} audio or {D} audio, but not both. Otherwise, just produce {E} audio",
+            "produce either {C} audio or {D} audio, but not both, if {A} audio or {B} audio is generated exclusively. If neither or both are generated, create {E} audio instead",
+            "if either {A} audio or {B} audio is generated, but not both, then further to produce either {C} audio or {D} audio, also not both. Otherwise, generate {E} audio"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            19,
+            20,
+            94
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "ExclusiveOr plus Implication IfElse based Quinary Nested Combination relation",
+        "name": "ExclusiveOr_Implication_IfElse_Quinary",
+        "id": "ExclusiveOr_Implication_IfElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio or {B} audio but not both, then further generate {C} audio, else just generate {D} audio or {E} audio, also not both",
+            "generate {C} audio if {A} audio or {B} audio is produced exclusively. If neither or both are generated, generate {D} audio or {E} audio instead, also not both",
+            "when exactly one of {A} audio or {B} audio is created, continue by generating {C} audio. If neither or both are generated, proceed to generate just {D} audio or {E} audio",
+            "if either {A} audio or {B} audio is generated exclusively, continue with the generation of {C} audio. If neither or both are generated, simply generate one of the {D} audio or {E} audio",
+            "produce {C} audio only if {A} audio or {B} audio is generated exclusively. If not, exclusively generate {D} audio or {E} audio"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            19,
+            20,
+            95
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "ExclusiveOr plus Implication ThenElse based Quinary Nested Combination relation",
+        "name": "ExclusiveOr_Implication_ThenElse_Quinary",
+        "id": "ExclusiveOr_Implication_ThenElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio is generated, then continue by generating {B} audio or {C} audio, but not both, else just generate {D} audio or {E} audio, also not both",
+            "generate {B} audio or {C} audio, but not both, if {A} audio is produced. If not, generate {D} audio or {E} audio instead, exclusively",
+            "when {A} audio is created, continue by generating {B} audio or {C} audio, but not both. If {A} audio is not generated, proceed to generate {D} audio or {E} audio, but not to generate both",
+            "if {A} audio is generated, continue with {B} audio or {C} audio, but not both. If {A} audio is not generated, proceed to generate {D} audio or {E} audio, also not both",
+            "produce {B} audio or {C} audio exclusively, if {A} audio is generated. If not, generate {D} audio or {E} audio, not inclusively"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            19,
+            20,
+            96
+        ],
+        "parent_label": [
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Conjunction plus ExclusiveOr plus Implication IfThen based Quinary Nested Combination relation",
+        "name": "Conjunction_ExclusiveOr_Implication_IfThen_Quinary",
+        "id": "Conjunction_ExclusiveOr_Implication_IfThen_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio and {B} audio, then further generate {C} audio or {D} audio, but not both, else just generate {E} audio",
+            "generate {C} audio or {D} audio, but not both, if {A} audio and {B} audio are produced. If not, generate {E} audio instead",
+            "when {A} audio and {B} audio are successfully created, continue by generating {C} audio or {D} audio exclusively. If not, only produce {E} audio",
+            "if {A} audio and {B} audio are generated, continue with the generation of {C} audio or {D} audio, but not both. If not, simply create {E} audio",
+            "produce {C} audio or {D} audio exclusive, only if {A} audio and {B} audio are generated. If not, just generate {E} audio instead"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            16,
+            19,
+            20,
+            94,
+            97
+        ],
+        "parent_label": [
+            4,
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Conjunction plus ExclusiveOr plus Implication IfElse based Quinary Nested Combination relation",
+        "name": "Conjunction_ExclusiveOr_Implication_IfElse_Quinary",
+        "id": "Conjunction_ExclusiveOr_Implication_IfElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if generated {A} audio and {B} audio, then further generate {C} audio, else just generate {D} audio or {E} audio, but not both",
+            "generate {C} audio if {A} audio and {B} audio are produced. If not, generate {D} audio or {E} audio, but not both",
+            "when {A} audio and {B} audio are successfully created, continue by generating {C} audio. If not, proceed to generate {D} audio or {E} audio exclusively",
+            "if {A} audio and {B} audio are generated, continue with the generation of {C} audio. If not, only generate just {D} audio or {E} audio",
+            "produce {C} audio only if {A} audio and {B} audio are generated. If not, generate {D} audio or {E} audio exclusively"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            16,
+            19,
+            20,
+            95,
+            98
+        ],
+        "parent_label": [
+            4,
+            4,
+            4,
+            5
+        ]
+    },
+    {
+        "arity": 5,
+        "explanation": "Conjunction plus ExclusiveOr plus Implication ThenElse based Quinary Nested Combination relation",
+        "name": "Conjunction_ExclusiveOr_Implication_ThenElse_Quinary",
+        "id": "Conjunction_ExclusiveOr_Implication_ThenElse_Quinary",
+        "child_ids": [],
+        "text_prompt_template": [
+            "if the {A} audio is generated, then continue by generating {B} audio and {C} audio together, else just generate {D} audio or {E} audio, but not both",
+            "generate {B} audio and {C} audio together if {A} audio is produced. If not, create either {D} audio or {E} audio, ensuring only one of them is generated",
+            "when {A} audio is generated, follow it by producing both {B} audio and {C} audio. Otherwise, produce {D} audio or {E} audio, but ensure only one is created",
+            "if {A} audio is created, continue by generating {B} audio alongside {C} audio. If {A} is not generated, produce either {D} audio or {E} audio, in exclusive manner",
+            "produce {B} audio and {C} audio inclusively, if {A} audio is generated. If not, generate just {D} audio or {E} audio instead"
+        ],
+        "event_rule_code": "ABCDE",
+        "event_max_timelen_code": "55555",
+        "child_label": [
+            16,
+            19,
+            20,
+            96,
+            99
+        ],
+        "parent_label": [
+            4,
+            4,
+            4,
+            5
+        ]
+    }
+]
